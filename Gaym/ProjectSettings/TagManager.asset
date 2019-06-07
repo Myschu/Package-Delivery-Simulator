@@ -39,12 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 1303911271
     locked: 0
   - name: Map
     uniqueID: 1387486915
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
