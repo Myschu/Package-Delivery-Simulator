@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - Node
+  - Map
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -13,9 +19,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - LayerBottom
+  - LayerMiddle
+  - LayerTop
   - 
   - 
   - 
@@ -38,6 +44,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1303911271
+    locked: 0
+  - name: Map
+    uniqueID: 1387486915
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: top
+    uniqueID: 231663189
+    locked: 0
+  - name: 2
+    uniqueID: 3405170911
+    locked: 0
+  - name: 3
+    uniqueID: 375396737
     locked: 0
