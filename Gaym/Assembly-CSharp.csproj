@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\PathFollow.cs" />
+     <Compile Include="Assets\Scripts\GenerateLine.cs" />
      <Compile Include="Assets\Scripts\Map.cs" />
+     <Compile Include="Assets\Scripts\Node.cs" />
      <Compile Include="Assets\Scripts\Toggle.cs" />
      <Compile Include="Assets\Scripts\pathMark.cs" />
  <Reference Include="Unity.Timeline.Editor">
@@ -75,6 +77,9 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/Documents/Gaym Proj/Gaym/Gaym/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/Documents/Gaym Proj/Gaym/Gaym/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>D:/Documents/Gaym Proj/Gaym/Gaym/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
@@ -92,9 +97,6 @@
  </Reference>
  <Reference Include="Unity.ugui.Editor">
  <HintPath>D:/Documents/Gaym Proj/Gaym/Gaym/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Documents/Gaym Proj/Gaym/Gaym/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Programs/Unity/2019.3.0a5/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

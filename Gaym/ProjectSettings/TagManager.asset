@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Node
+  - Map
   layers:
   - Default
   - TransparentFX
