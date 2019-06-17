@@ -10,21 +10,20 @@ public class GenerateLine : MonoBehaviour
     private float counter;
     private float distance;
 
+    private GameObject Map;
+    private List<GameObject> last_travelled_list;
 
     public Transform origin;
-    public Transform destination;
-    public GameObject button;
+    //public Transform destination;
+    //public GameObject button;
 
   
 
     void Start()
     {
-        //Uncaching component
-        //Essentially avoids overhead
         line_renderer = GetComponent<LineRenderer>();
-        //        this.transform.SetPositionAndRotation(origin.position, new Quaternion());
-        line_renderer.positionCount = 2;
-        line_renderer.SetPosition(0, new Vector2(origin.position.x,origin.position.y));
+        line_renderer.SetPosition(0, origin.position);
+
         
        
 
@@ -35,18 +34,26 @@ public class GenerateLine : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-       
-        if (button.GetComponent<Toggle>().isOn)
-        //if (Input.GetKeyDown("space"))
-         {
-           // Debug.Log("Should be drawing this damn line");
-            line_renderer.SetPosition(1, new Vector2(destination.position.x, destination.position.y));
-        }
-        else
-        {
-            line_renderer.SetPosition(1, new Vector2(origin.position.x, origin.position.y));
-        }
+        Map = GameObject.FindGameObjectWithTag("Map");
+        Map map = Map.GetComponent<Map>();
+        last_travelled_list = map.LastSelected;
+
+
+        //Uncaching component
+        //Essentially avoids overhead
         
+        //        this.transform.SetPositionAndRotation(origin.position, new Quaternion());
+        line_renderer.positionCount = last_travelled_list.Count;
+        int count = last_travelled_list.Count;
+        if (Input.GetKeyDown("space")) Debug.Log("Number  = " + count);
+        for (int i = 0; i < last_travelled_list.Count; i++)
+        {
+            if (last_travelled_list[i].GetComponent<Toggle>().isOn)
+            {
+                line_renderer.SetPosition(i, last_travelled_list[i].transform.position);
+            }
+
+        }
         /*
         if(Input.GetKeyDown("space"))
         {

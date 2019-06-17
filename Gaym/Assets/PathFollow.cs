@@ -4,19 +4,44 @@ using UnityEngine;
 
 public class PathFollow : MonoBehaviour
 {
-
-    public Transform[] target;
+    private GameObject Map;
+    private List<GameObject> last_travelled_list;
+    private List<Transform> target;
 
     public float speed;
 
     private int current=0;
 
+    void Start()
+    {
+        Map = GameObject.FindGameObjectWithTag("Map");
+        Map map = Map.GetComponent<Map>();
+        last_travelled_list = map.LastSelected;
+    }
     
     
     // Update is called once per frame
     void Update()
     {
-        if (current == target.Length) { speed = 0; }
+        for (int i = 0; i < last_travelled_list.Count; i++)
+        {
+            target[i] = last_travelled_list[i].GetComponent<Transform>();
+            
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            int i = 0;
+            foreach (Transform x in target){
+
+                Debug.Log("Target[" + i + "] x pos = " + x.position.x);
+                Debug.Log("Target[" + i + "] y pos = " + x.position.y);
+                Debug.Log("Target[" + i + "] z pos = " + x.position.z);
+                i++;
+            }
+        } 
+
+        if (current == target.Count) { speed = 0; }
         else
         {
             Vector2 this_pos = new Vector2(transform.position.x, transform.position.y);
