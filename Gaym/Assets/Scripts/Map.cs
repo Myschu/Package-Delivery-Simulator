@@ -39,11 +39,6 @@ public class Map : MonoBehaviour
         button.NodeOn = true;
         LastSelected.Add(Origin);
 
-        //Paths = GameObject.FindGameObjectsWithTag(TagName2);
-        /*
-        LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.material.color = Color.red;
-        */
     }
     private void Update()
     {   
@@ -90,37 +85,5 @@ public class Map : MonoBehaviour
                 button.Interactable = true;
             }
         }
-        /*
-        LineRenderer lineRenderer = GetComponent<LineRenderer>();
-        for (int i = 0; i < number - 1; i++)
-        {
-            for (int j = 1; j < number - 2; j++)
-            {
-                lineRenderer.SetPosition(0, new Vector3(LastSelected[i].transform.position.x, LastSelected[i].transform.position.y, LastSelected[i].transform.position.z));
-                lineRenderer.SetPosition(1, new Vector3(LastSelected[j].transform.position.x, LastSelected[j].transform.position.y, LastSelected[j].transform.position.z));
-            }
-        }
-        */
     }
-    /*
-    void OnPostRender()
-    {   
-        GL.PushMatrix();
-        line_material.SetPass(0);
-        GL.LoadOrtho();
-        int number = LastSelected.Count;
-        for (int i = 0; i < number - 1; i++)
-        {
-            for (int j = 1; j < number - 2; j++)
-            {
-                GL.Begin(GL.LINES);
-                GL.Color(Color.red);
-                GL.Vertex(new Vector3(LastSelected[i].transform.position.x, LastSelected[i].transform.position.y, LastSelected[i].transform.position.z));
-                GL.Vertex(new Vector3(LastSelected[j].transform.position.x, LastSelected[j].transform.position.y, LastSelected[j].transform.position.z));
-            }
-        }
-        GL.End();
-        GL.PopMatrix();
-    }
-    */
 }
