@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 94
+  controlID: 96
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -418,20 +418,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bykko\Desktop\Gaym\Gaym
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34360000
-    m_LastClickedID: 13876
-    m_ExpandedIDs: 00000000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c3600000e36000000ca9a3b
+    m_SelectedIDs: 12360000
+    m_LastClickedID: 13842
+    m_ExpandedIDs: 00000000da350000dc350000de350000e0350000e2350000e4350000e6350000e8350000ea350000ec350000ee35000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,7 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c3600000e360000
+    m_ExpandedIDs: 00000000da350000dc350000de350000e0350000e2350000e4350000e6350000e8350000ea350000ec350000ee350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -580,9 +580,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: cc390000
-      m_LastClickedID: 14796
-      m_ExpandedIDs: eafaffff7efbffff
+      m_SelectedIDs: e4370000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8cfaffff7efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -642,9 +642,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 525.2157, y: 335.37476, z: -905.20715}
+    m_Target: {x: 551.4384, y: 279.29086, z: -1023.2172}
     speed: 2
-    m_Value: {x: 525.2157, y: 335.37476, z: -905.20715}
+    m_Value: {x: 551.4384, y: 279.29086, z: -1023.2172}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -678,9 +678,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 67.9733
+    m_Target: 303.46976
     speed: 2
-    m_Value: 67.9733
+    m_Value: 303.46976
   m_Ortho:
     m_Target: 1
     speed: 2
