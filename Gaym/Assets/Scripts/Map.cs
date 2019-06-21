@@ -34,55 +34,62 @@ public class Map : MonoBehaviour
     public List<GameObject> LastSelected = new List<GameObject>();
     void Start()
     {
-        Buttons = GameObject.FindGameObjectsWithTag(TagName);
-        Node button = Origin.GetComponent<Node>();
-        button.NodeOn = true;
-        LastSelected.Add(Origin);
-
-    }
-    private void Update()
-    {   
+        
+        //Node button = Origin.GetComponent<Node>();
+        //button.NodeOn = true;
+        //LastSelected.Add(Origin);
         foreach (GameObject node in Buttons)
         {
             Node button = node.GetComponent<Node>();
-            button.Interactable = false;
+            button.Interactable = true;
         }
-        int number = LastSelected.Count;
-        int size_of_buttons = Buttons.Length;
-        GameObject Button = LastSelected[number - 1];
-        int index = System.Array.IndexOf(Buttons, Button);
-        Node curr_button = Buttons[index].GetComponent<Node>();
-        curr_button.Interactable = true;
-        if (index + 3 <= size_of_buttons - 1)
+    }
+    private void Update()
+    {
+        Buttons = GameObject.FindGameObjectsWithTag(TagName);
+        if (LastSelected.Count == 0)
         {
-            Node button = Buttons[index + 3].GetComponent<Node>();
-            if (button.NodeOn == false)
+            foreach (GameObject node in Buttons)
             {
+                Node button = node.GetComponent<Node>();
                 button.Interactable = true;
             }
         }
-        if (index - 3 >= 0)
+        else
         {
-            Node button = Buttons[index - 3].GetComponent<Node>();
-            if (button.NodeOn == false)
+            foreach (GameObject node in Buttons)
             {
-                button.Interactable = true;
+                Node buttontemp = node.GetComponent<Node>();
+                buttontemp.Interactable = false;
             }
-        }
-        if (index%3 != 2 && index + 1 <= size_of_buttons - 1)
-        {
-            Node button = Buttons[index + 1].GetComponent<Node>();
-            if (button.NodeOn == false)
+            int number = LastSelected.Count;
+            int size_of_buttons = Buttons.Length;
+            GameObject Button = LastSelected[number - 1];
+            Origin = LastSelected[0];
+            Node button = Origin.GetComponent<Node>();
+            button.NodeOn = true;
+            int index = System.Array.IndexOf(Buttons, Button);
+            Node curr_button = Buttons[index].GetComponent<Node>();
+            curr_button.Interactable = true;
+            if (index + 3 <= size_of_buttons - 1)
             {
-                button.Interactable = true;
+                Node buttontemp2 = Buttons[index + 3].GetComponent<Node>();
+                buttontemp2.Interactable = true;
             }
-        }
-        if (index%3 != 0 && index - 1 >= 0)
-        {
-            Node button = Buttons[index - 1].GetComponent<Node>();
-            if (button.NodeOn == false)
+            if (index - 3 >= 0)
             {
-                button.Interactable = true;
+                Node buttontemp2 = Buttons[index - 3].GetComponent<Node>();
+                buttontemp2.Interactable = true;
+            }
+            if (index % 3 != 2 && index + 1 <= size_of_buttons - 1)
+            {
+                Node buttontemp2 = Buttons[index + 1].GetComponent<Node>();
+                buttontemp2.Interactable = true;
+            }
+            if (index % 3 != 0 && index - 1 >= 0)
+            {
+                Node buttontemp2 = Buttons[index - 1].GetComponent<Node>();
+                buttontemp2.Interactable = true;
             }
         }
     }

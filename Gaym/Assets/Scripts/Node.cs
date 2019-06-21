@@ -10,7 +10,7 @@ public class Node : MonoBehaviour
     public bool Interactable = false;
     public GameObject Button;
     public GameObject Map;
-    private int tog; 
+    private int tog;
     void Start()
     {
         tog = 0;
@@ -18,7 +18,7 @@ public class Node : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Button.GetComponent<Toggle>().isOn = NodeOn;
         Button.GetComponent<Toggle>().interactable = Interactable;
@@ -28,8 +28,8 @@ public class Node : MonoBehaviour
          }*/
 
         Invoke("activate", 1.0f);
-        
-        
+
+
     }
     void activate()
     {
@@ -55,7 +55,7 @@ public class Node : MonoBehaviour
         if (val)
         {
             map.LastSelected.Add(Button);
-            
+
         }
         else
         {
