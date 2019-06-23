@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Node
   - Map
+  - Truck
   layers:
   - Default
   - TransparentFX

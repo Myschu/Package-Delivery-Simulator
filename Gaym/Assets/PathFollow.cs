@@ -11,11 +11,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PathFollow : MonoBehaviour
 {
-
-    private Vector3[] target;
+    public Clock clock;
+    public Vector3[] target;
     private int line_points;
     private LineRenderer Line; 
 
@@ -46,6 +47,11 @@ public class PathFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (clock.hour == 9)
+        {
+            enabled = false;
+            SceneManager.LoadScene("End Day Scene", LoadSceneMode.Additive);
+        }
         //When truck reaches end of path
         if (current == target.Length) {
             speed = 0;
@@ -61,7 +67,11 @@ public class PathFollow : MonoBehaviour
                 Vector2 pos = Vector2.MoveTowards(this_pos, target_pos, 10 * speed * Time.deltaTime);
                 GetComponent<Rigidbody2D>().MovePosition(pos);
             }
-            else current = (current + 1);
+            else
+            {
+                current = (current + 1);
+                clock.Ticker();
+            }
         }
     
     }
