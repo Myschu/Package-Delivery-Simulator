@@ -10,29 +10,39 @@ public class Clock : MonoBehaviour {
     private Transform ClockHandHourTransform;
     private Transform ClockHandMinTransform;
     private Text TimeText;
-    private float day;
+    public float hour = 8;
+    public float min = 0;
+    //float timeToGo;
 
     private void Awake() {
         ClockHandHourTransform = transform.Find("ClockHandHour");
         ClockHandMinTransform = transform.Find("ClockHandMin");
         TimeText = transform.Find("TimeText").GetComponent<Text>();
+        ClockHandHourTransform.Rotate(0, 0, 120, Space.Self);
+
     }
 
-    private void Update() {
-        day += Time.deltaTime / REAL_SECONDS_PER_INGAME_DAY;
+    public void Ticker() {
 
-        float dayNormalized = day % 1f;
+        //ClockHandHourTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
+        //ClockHandHourTransform.RotateAround(new Vector3(-322.0f, 114.0f, 0.0f), Vector3.forward, 180*Time.deltaTime);
+        ClockHandHourTransform.Rotate(0, 0, -15, Space.Self);
 
-        float rotationDegreesPerDay = 360f;
-        ClockHandHourTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
+        //ClockHandMinTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
+        //ClockHandMinTransform.RotateAround(new Vector3(-322.0f, 114.0f, 0.0f), Vector3.forward, 15* Time.deltaTime);
+        ClockHandMinTransform.Rotate(0, 0, -180, Space.Self);
 
-        float hoursPerDay = 24f;
-        ClockHandMinTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
+        min += 30;
 
-        string hoursString = Mathf.Floor(dayNormalized * hoursPerDay).ToString("00");
+        if (min == 60)
+        {
+            min = 0;
+            hour += 1;
+        }
 
-        float minutesPerHour = 60f;
-        string minutesString = Mathf.Floor(((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
+        string hoursString = Mathf.Floor(hour%12).ToString("00");
+
+        string minutesString = Mathf.Floor(min%60).ToString("00");
 
         TimeText.text = hoursString + ":" + minutesString;
     }
