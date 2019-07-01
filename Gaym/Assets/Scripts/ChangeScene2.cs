@@ -10,5 +10,7 @@ public class ChangeScene2 : MonoBehaviour
         SceneManager.LoadScene(SceneToChangeTo, LoadSceneMode.Single);
         DayCount.Instance.Day += 1;
         Debug.Log(DayCount.Instance.Day);
+        GenerateLine thisLine = Object.FindObjectOfType<GenerateLine>();
+        Destroy(thisLine);
     }
 }

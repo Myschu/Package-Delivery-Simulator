@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Planning.unity
+- path: Assets/Scenes/Truck_Patching_NodeUpdate.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

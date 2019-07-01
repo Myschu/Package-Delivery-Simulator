@@ -22,11 +22,6 @@ public class Node : MonoBehaviour
     {
         Button.GetComponent<Toggle>().isOn = NodeOn;
         Button.GetComponent<Toggle>().interactable = Interactable;
-        /** if( Button.GetComponent<Toggle>().onValueChanged.Equals(true) && x == true) {
-             x = false;
-             TaskOnClick();
-         }*/
-
         Invoke("activate", 1.0f);
 
 
