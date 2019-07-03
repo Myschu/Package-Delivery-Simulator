@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DayCount : Singleton<DayCount>
 {
-    public int Day = 0;
+    public int Day = 1;
 }

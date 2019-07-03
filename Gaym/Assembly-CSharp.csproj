@@ -62,10 +62,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\ChangeScene2.cs" />
+    <Compile Include="Assets\Scripts\ChangeScene3.cs" />
     <Compile Include="Assets\Scripts\Clock.cs" />
     <Compile Include="Assets\Scripts\DayCount.cs" />
     <Compile Include="Assets\Scripts\GenerateLine.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
+    <Compile Include="Assets\Scripts\NewDay.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\PathFollow.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
