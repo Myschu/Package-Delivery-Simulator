@@ -38,6 +38,9 @@ public class PathFollow : MonoBehaviour
     //De-caches LineRenderer generated positions by creating an array of positions for truck to follow
     void Start()
     {
+        //DontDestroyOnLoad(this.gameObject);
+        SceneManager.LoadScene("Choose_Direction", LoadSceneMode.Additive);
+
         //Local reference to LineRenderer object that was not deleted from scene transition
         Line = Object.FindObjectOfType<LineRenderer>();
 

@@ -7,6 +7,9 @@ TagManager:
   - Fire
   - Node
   - Map
+  - MapLocationalNode
+  - UI_Directions
+  - Truck
   layers:
   - Default
   - TransparentFX
