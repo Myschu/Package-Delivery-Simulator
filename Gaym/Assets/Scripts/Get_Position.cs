@@ -21,10 +21,20 @@ public class Get_Position : MonoBehaviour
 
         foreach (GameObject e in UI_Directions)
         {
-            if (e.name == "Right Arrow") { UI_Image_RIGHT = e; }
-            if (e.name == "Left Arrow") { UI_Image_LEFT = e; }
-            if (e.name == "Up Arrow") { UI_Image_UP = e; }        
-            if (e.name == "Down Arrow") { UI_Image_DOWN = e; }
+            
+            if (e.name == "Right Arrow") { UI_Image_RIGHT = e;
+                Debug.Log("Success for " + e.name);
+            }
+            if (e.name == "Left Arrow") { UI_Image_LEFT = e;
+                Debug.Log("Success for " + e.name);
+            }
+            if (e.name == "Up Arrow") { UI_Image_UP = e;
+                Debug.Log("Success for " + e.name);
+                e.SetActive(false);
+            }        
+            if (e.name == "Down Arrow") { UI_Image_DOWN = e;
+                Debug.Log("Success for " + e.name +" "+ e.transform.position);
+            }
 
         }
 
@@ -46,10 +56,10 @@ public class Get_Position : MonoBehaviour
 
 
 
-        UI_Image_DOWN.transform.position = thisObject.transform.position + new Vector3(0, -90, 0);
-        UI_Image_UP.transform.position = thisObject.transform.position + new Vector3(0, 90, 0);
-        UI_Image_LEFT.transform.position = thisObject.transform.position + new Vector3(-90, 0, 0);
-        UI_Image_RIGHT.transform.position = thisObject.transform.position + new Vector3(90, 0, 0);
+        UI_Image_DOWN.transform.position = thisObject.transform.position + new Vector3(0, -60, 0);
+        UI_Image_UP.transform.position = thisObject.transform.position + new Vector3(0, 60, 0);
+        UI_Image_LEFT.transform.position = thisObject.transform.position + new Vector3(-60, 0, 0);
+        UI_Image_RIGHT.transform.position = thisObject.transform.position + new Vector3(60, 0, 0);
 
 
         //Debug.Log(UI_Image_.transform.position);
