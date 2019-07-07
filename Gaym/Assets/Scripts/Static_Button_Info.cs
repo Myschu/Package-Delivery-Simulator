@@ -9,10 +9,40 @@ public static class Static_Button_Info
 
     public static void setInfo(string name)
     {
-        if (name == "up") up = true;
-        if (name == "down") down = true;
-        if (name == "left") left = true;
-        if (name == "right") right = true;
+        if (name == "Up Arrow")
+        {
+            up = true;
+            down = false;
+            left = false;
+            right = false;
+        }
+        if (name == "Down Arrow") {
+            up = false;
+            down = true;
+            left = false;
+            right = false;
+        }
+        if (name == "Left Arrow") {
+            up = false;
+            down = false;
+            left = true;
+            right = false;
+        }
+        if (name == "Right Arrow") {
+            up = false;
+            down = false;
+            left = false;
+            right = true;
+        }
+        if (name == "reset")
+        {
+            up = false;
+            down = false;
+            left = false;
+            right = false;
+        }
+   
+
     }
 
 

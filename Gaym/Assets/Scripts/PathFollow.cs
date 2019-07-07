@@ -19,7 +19,7 @@ using UnityEngine.SceneManagement;
 
 public class PathFollow : MonoBehaviour
 {
-    private static bool up, down, left, right;
+    private bool up, down, left, right;
     public static bool visible_Up, visible_Down, visible_Left, visible_Right;
    
     private bool movement_flag;
@@ -46,22 +46,11 @@ public class PathFollow : MonoBehaviour
     public static int count = 1;
 
 
+    private GameObject[] UI_Directions;
+    private GameObject thisObject, anchorPoint, UI_Image_DOWN, UI_Image_UP, UI_Image_LEFT, UI_Image_RIGHT;
 
 
 
-
-    public static void getDirection(string direction)
-    {
-        if (count <= 1)
-        {
-            if (direction == "up") up = true;
-            if (direction == "down") { down = true; Debug.Log("made it to down"); }
-            if (direction == "left") left = true;
-            if (direction == "right") right = true;
-        }
-        count++;
-
-    } 
 
 
 
@@ -161,6 +150,43 @@ public class PathFollow : MonoBehaviour
         }
         Debug.Log(current_index); // Should be 0 to start
 
+        up = Static_Button_Info.Up;
+        down = Static_Button_Info.Down;
+        left = Static_Button_Info.Left;
+        right = Static_Button_Info.Right;
+
+        UI_Directions = GameObject.FindGameObjectsWithTag("UI_Directions");
+
+
+        foreach (GameObject e in UI_Directions)
+        {
+
+            if (e.name == "Right Arrow")
+            {
+                UI_Image_RIGHT = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Left Arrow")
+            {
+                UI_Image_LEFT = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Up Arrow")
+            {
+                UI_Image_UP = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Down Arrow")
+            {
+                UI_Image_DOWN = e;
+                Debug.Log("Success for " + e.name + " " + e.transform.position);
+            }
+
+        }
+
 
 
         //Test
@@ -171,9 +197,15 @@ public class PathFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.UnloadSceneAsync("Choose_Direction");
+            Start();
+        }
+        
+        if (Input.GetKeyDown("k"))
+            //clock.hour == 10)
 
-        if (clock.hour == 10)
         {
             enabled = false;
             SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Additive);
@@ -204,6 +236,7 @@ public class PathFollow : MonoBehaviour
 
                     clock.Ticker();
                     movement_flag = false;
+                    Static_Button_Info.setInfo("reset");
                     count = 1;
                 }
             }
