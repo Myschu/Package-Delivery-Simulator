@@ -15,7 +15,12 @@ public class Get_Position : MonoBehaviour
     void Start()
     {
 
+
+        
+
+
         truck = GameObject.FindGameObjectWithTag("Truck");
+
         if (truck!= null ) original = truck.transform.position;
         thisObject = GameObject.FindGameObjectWithTag("Map");
         anchorPoint = GameObject.FindGameObjectWithTag("Node");
@@ -84,7 +89,7 @@ public class Get_Position : MonoBehaviour
         {
             if (!(truck.transform.Equals(original)) && truck.GetComponent<Rigidbody2D>().velocity.Equals(new Vector2(0, 0)))
             {
-                Start();
+                //Start();
             }
         }
     }

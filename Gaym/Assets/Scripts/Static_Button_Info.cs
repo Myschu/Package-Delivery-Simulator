@@ -16,25 +16,25 @@ public static class Static_Button_Info
             left = false;
             right = false;
         }
-        if (name == "Down Arrow") {
+        else if (name == "Down Arrow") {
             up = false;
             down = true;
             left = false;
             right = false;
         }
-        if (name == "Left Arrow") {
+        else if (name == "Left Arrow") {
             up = false;
             down = false;
             left = true;
             right = false;
         }
-        if (name == "Right Arrow") {
+        else if (name == "Right Arrow") {
             up = false;
             down = false;
             left = false;
             right = true;
-        }
-        if (name == "reset")
+        } 
+        else
         {
             up = false;
             down = false;

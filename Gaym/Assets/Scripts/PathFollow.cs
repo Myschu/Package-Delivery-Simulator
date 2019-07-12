@@ -9,6 +9,9 @@
  * 
  * 7-6-2019 : 
  *  -Added variables that are meant to be accessed by arrow buttons only.
+ *  
+ *  
+ *  
  * 
  */
 
@@ -23,6 +26,7 @@ public class PathFollow : MonoBehaviour
     public static bool visible_Up, visible_Down, visible_Left, visible_Right;
    
     private bool movement_flag;
+    private bool moving = false;
     private int current_index;
 
 
@@ -64,7 +68,10 @@ public class PathFollow : MonoBehaviour
         Line = Object.FindObjectOfType<LineRenderer>();
 
         Nodes = GameObject.FindGameObjectsWithTag("MapLocationalNode");
-        
+
+        foreach (GameObject x in Nodes) {
+            if (transform.position.Equals(x.transform.position)) { Debug.Log("One of these matches"); }
+ }
 
         /* Nodes are listed in order from 00, 10, 20, 01, 11, 21, etc
          * 
@@ -150,11 +157,12 @@ public class PathFollow : MonoBehaviour
         }
         Debug.Log(current_index); // Should be 0 to start
 
-        up = Static_Button_Info.Up;
-        down = Static_Button_Info.Down;
-        left = Static_Button_Info.Left;
-        right = Static_Button_Info.Right;
-
+        /*
+        Static_Button_Info.Up = false;
+        Static_Button_Info.Down = false;
+        Static_Button_Info.Left = false;
+        Static_Button_Info.Right = false;
+        */
         UI_Directions = GameObject.FindGameObjectsWithTag("UI_Directions");
 
 
@@ -187,22 +195,26 @@ public class PathFollow : MonoBehaviour
 
         }
 
-
+        up = Static_Button_Info.Up;
+        down = Static_Button_Info.Down;
+        left = Static_Button_Info.Left;
+        right = Static_Button_Info.Right;
 
         //Test
-        //down = true;
+        down = true;
 
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        
+        
+        if (Input.GetMouseButtonDown(0)&&!moving)
         {
             SceneManager.UnloadSceneAsync("Choose_Direction");
             Start();
         }
-        
         if (Input.GetKeyDown("k"))
             //clock.hour == 10)
 
@@ -214,30 +226,39 @@ public class PathFollow : MonoBehaviour
         else
         {
             Vector2 this_pos = new Vector2(transform.position.x, transform.position.y);
+            moving = true;
+            if (!movement_flag)
+            {
+                Vector2 target_pos = findDirection();
+            
+               
 
-            Vector2 target_pos = findDirection();
 
             Vector2 pos = Vector2.MoveTowards(this_pos, target_pos, 10 * speed * Time.deltaTime);
+
+
             GetComponent<Rigidbody2D>().MovePosition(pos);
             if(this_pos!=target_pos) movement_flag = true;
-            //Vector2 target_pos = new Vector2(target[current].x, target[current].y);
-            if (this_pos == target_pos)
-            {
-                speed = 0;
-
-                if (movement_flag)
+                //Vector2 target_pos = new Vector2(target[current].x, target[current].y);
+                if (this_pos == target_pos)
                 {
-                    //Resets directional 
-                    if (up) { up = false; current_index += 3; }
-                    if (down) { down = false; current_index -= 3; Debug.Log("am I here????"); }
-                    if (left) { left = false; current_index -= 1; }
-                    if (right){ right = false; current_index += 1;}
-                
+                    moving = false;
+                    speed = 0;
 
-                    clock.Ticker();
-                    movement_flag = false;
-                    Static_Button_Info.setInfo("reset");
-                    count = 1;
+                    if (movement_flag)
+                    {
+                        //Resets directional 
+                        if (up) { up = false; current_index += 3; }
+                        if (down) { down = false; current_index -= 3; Debug.Log("am I here????"); }
+                        if (left) { left = false; current_index -= 1; }
+                        if (right) { right = false; current_index += 1; }
+
+
+                        clock.Ticker();
+                        movement_flag = false;
+                        Static_Button_Info.setInfo("reset");
+                        count = 1;
+                    }
                 }
             }
         }
@@ -248,9 +269,13 @@ public class PathFollow : MonoBehaviour
     {
         Vector2 toReturn = new Vector2(transform.position.x, transform.position.y);
 
-
-        if (up) toReturn = new Vector2(Nodes[current_index + 3].transform.position.x, Nodes[current_index + 3].transform.position.y);
-        else if (down) { toReturn = new Vector2(Nodes[current_index - 3].transform.position.x, Nodes[current_index - 3].transform.position.y); Debug.Log(toReturn); }
+        
+        if (up)
+        {
+            toReturn = new Vector2(Nodes[current_index + 3].transform.position.x, Nodes[current_index + 3].transform.position.y);
+            movement_flag = true;
+        }
+        else if (down) { toReturn = new Vector2(Nodes[current_index - 3].transform.position.x, Nodes[current_index - 3].transform.position.y); Debug.Log(toReturn); movement_flag = true; }
         else if (right) toReturn = new Vector2(Nodes[current_index + 1].transform.position.x, Nodes[current_index + 1].transform.position.y);
         else if (left) toReturn = new Vector2(Nodes[current_index - 1].transform.position.x, Nodes[current_index - 1].transform.position.y);
 
