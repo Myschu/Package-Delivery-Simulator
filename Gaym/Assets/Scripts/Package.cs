@@ -11,7 +11,7 @@ public class Package
     private string type;
     private string condition;
     private GameObject destination;
-    public void Start()
+    public void Generate()
     {
         type = types[Random.Range(0, 3)];
         condition = conditions[Random.Range(0, 3)];

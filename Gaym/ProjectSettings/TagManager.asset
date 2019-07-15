@@ -12,6 +12,7 @@ TagManager:
   - Truck
   - Line
   - House
+  - Texty
   layers:
   - Default
   - TransparentFX

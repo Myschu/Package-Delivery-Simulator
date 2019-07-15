@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 95078375}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Texty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02d996800880e5458e104a9351e68aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line_material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  line_material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 3}
   TagName: Node
   TagName2: Path
   Buttons: []
@@ -1131,7 +1131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98769703701fb08428424b3ef2f15554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObject: {fileID: 95078373}
 --- !u!114 &564599712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,7 +1138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564599707}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 458bf333cc222a34f954b01690b95eee, type: 3}
   m_Name: 
@@ -3190,6 +3189,7 @@ GameObject:
   - component: {fileID: 1654816595}
   - component: {fileID: 1654816594}
   - component: {fileID: 1654816593}
+  - component: {fileID: 1654816596}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3245,6 +3245,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654816596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654816592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458bf333cc222a34f954b01690b95eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1695889282
 GameObject:
   m_ObjectHideFlags: 0
