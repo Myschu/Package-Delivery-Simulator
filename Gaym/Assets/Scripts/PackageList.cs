@@ -8,7 +8,7 @@ public static class PackageList
     //public GameObject textObject;
     static Text package_list;
     static string yes1;
-    static int count = 0;
+    //static int count = 0;
     static List<Package> packages = new List<Package>();
 
     public static void Start()
@@ -18,15 +18,16 @@ public static class PackageList
         yes1 = "";
         GameObject textObject = GameObject.FindGameObjectWithTag("Texty");
 
-        package_list = Object.FindObjectOfType<Text>();
+        package_list = textObject.GetComponent<Text>();
             Debug.Log("I have the old text box?");
             Debug.Log(Object.FindObjectOfType<Text>().text);
             Debug.Log(package_list.text);
-        if (package_list==null)
+
+        /*if (package_list==null)
         {
             package_list = textObject.GetComponent<Text>();
             Debug.Log("Override");
-        }
+        }*/
 
         
         //DontDestroyOnLoad(textObject);

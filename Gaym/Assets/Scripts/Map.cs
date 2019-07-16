@@ -60,7 +60,7 @@ public class Map : MonoBehaviour
             foreach (GameObject node in Buttons)
             {
                 Node buttontemp = node.GetComponent<Node>();
-                buttontemp.Interactable = false;
+                //buttontemp.Interactable = false;
             }
             int number = LastSelected.Count;
             int size_of_buttons = Buttons.Length;

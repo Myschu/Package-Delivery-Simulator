@@ -28,7 +28,7 @@ public class Node : MonoBehaviour
     }
     void activate()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (tog == 0)
             {
