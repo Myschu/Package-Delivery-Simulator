@@ -12,5 +12,6 @@ public class ChangeScene : MonoBehaviour
         thisLine.sceneChange();
         DontDestroyOnLoad(thisLine);
         SceneManager.LoadScene(SceneToChangeTo, LoadSceneMode.Single); // Supposed to delete previous scene and load new one. Does not do so properly at the moment. Currently adds new scene on top of previous scene.
+
     }
 }

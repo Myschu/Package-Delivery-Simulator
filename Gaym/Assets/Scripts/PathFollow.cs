@@ -94,6 +94,70 @@ public class PathFollow : MonoBehaviour
         {
             target[t] = Path[t].transform.position;
         }
+<<<<<<< Updated upstream
+=======
+        */
+
+        movement_flag = false;
+
+        //Set current index position of truck
+        foreach (GameObject x in Nodes)
+        {
+            if (x.transform.position == transform.position)
+            {
+                break;
+            }
+            current_index++;
+        }
+        Debug.Log(current_index); // Should be 0 to start
+
+        /*
+        Static_Button_Info.Up = false;
+        Static_Button_Info.Down = false;
+        Static_Button_Info.Left = false;
+        Static_Button_Info.Right = false;
+        */
+        UI_Directions = GameObject.FindGameObjectsWithTag("UI_Directions");
+
+
+        foreach (GameObject e in UI_Directions)
+        {
+
+            if (e.name == "Right Arrow")
+            {
+                UI_Image_RIGHT = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Left Arrow")
+            {
+                UI_Image_LEFT = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Up Arrow")
+            {
+                UI_Image_UP = e;
+                Debug.Log("Success for " + e.name);
+                //e.SetActive(false);
+            }
+            if (e.name == "Down Arrow")
+            {
+                UI_Image_DOWN = e;
+                Debug.Log("Success for " + e.name + " " + e.transform.position);
+            }
+
+        }
+
+        up = Static_Button_Info.Up;
+        down = Static_Button_Info.Down;
+        left = Static_Button_Info.Left;
+        right = Static_Button_Info.Right;
+
+        //Test
+        //down = true;
+
+>>>>>>> Stashed changes
     }
     
     // Update is called once per frame
