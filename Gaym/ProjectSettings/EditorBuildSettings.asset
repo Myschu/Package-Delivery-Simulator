@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Today.unity
     guid: 038e23f1ac70fa94eb149a15f81dd549
+  - enabled: 1
+    path: Assets/Scenes/Choose_Direction.unity
+    guid: 88f5260f5e3fdc348aa30ce24c6b95a0
   m_configObjects: {}

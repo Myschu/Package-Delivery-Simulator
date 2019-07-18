@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
 {
     public GameObject arrow;
     public GameObject[] Buttons;
-    public Rigidbody2D rb;
+    public Rigidbody rb;
     private int index;
     int size_of_buttons;
     private bool moving = false;
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         //Map map = Map.GetComponent<Map>();
         Buttons = GameObject.FindGameObjectsWithTag("MapLocationalNode");
         size_of_buttons = Buttons.Length;
-        rb = GameObject.FindGameObjectWithTag("Truck").GetComponent<Rigidbody2D>();
+        rb = GameObject.FindGameObjectWithTag("Truck").GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -30,9 +30,9 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        else if (rb.position != new Vector2(Buttons[index].transform.position.x, Buttons[index].transform.position.y))
+        else if (rb.position != new Vector3(Buttons[index].transform.position.x, Buttons[index].transform.position.y,0))
         {
-            rb.velocity = new Vector2((Buttons[index].transform.position.x - rb.position.x) * 1, (Buttons[index].transform.position.y - rb.position.y) * 1);
+            rb.velocity = new Vector3((Buttons[index].transform.position.x - rb.position.x) * 1, (Buttons[index].transform.position.y - rb.position.y) * 1,0);
             Debug.Log("RigidBodyx " + rb.position.x + " RigidBodyy " + rb.position.y + " Destinationx " + Buttons[index].transform.position.x + " Destinationy " + Buttons[index].transform.position.y);
         }
         if (Input.GetKeyDown("k"))
