@@ -7,14 +7,9 @@ TagManager:
   - Fire
   - Node
   - Map
-<<<<<<< Updated upstream
-=======
   - MapLocationalNode
   - UI_Directions
   - Truck
-  - Line
-  - Texty
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

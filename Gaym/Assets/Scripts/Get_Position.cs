@@ -84,7 +84,7 @@ public class Get_Position : MonoBehaviour
     {
         if (truck != null)
         {
-            if (!(truck.transform.Equals(original)) && truck.GetComponent<Rigidbody2D>().velocity.Equals(new Vector2(0, 0)))
+            if (!(truck.transform.Equals(original)) && truck.GetComponent<Rigidbody>().velocity.Equals(new Vector3(0, 0, 0)))
             {
                 //Start();
             }
