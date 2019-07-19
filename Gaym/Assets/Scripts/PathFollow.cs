@@ -94,9 +94,8 @@ public class PathFollow : MonoBehaviour
         {
             target[t] = Path[t].transform.position;
         }
-<<<<<<< Updated upstream
-=======
-        */
+
+        /*
 
         movement_flag = false;
 
@@ -116,7 +115,7 @@ public class PathFollow : MonoBehaviour
         Static_Button_Info.Down = false;
         Static_Button_Info.Left = false;
         Static_Button_Info.Right = false;
-        */
+        
         UI_Directions = GameObject.FindGameObjectsWithTag("UI_Directions");
 
 
@@ -153,11 +152,10 @@ public class PathFollow : MonoBehaviour
         down = Static_Button_Info.Down;
         left = Static_Button_Info.Left;
         right = Static_Button_Info.Right;
-
+        */
         //Test
         //down = true;
-
->>>>>>> Stashed changes
+        
     }
     
     // Update is called once per frame
