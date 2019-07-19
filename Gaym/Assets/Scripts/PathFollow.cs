@@ -94,9 +94,8 @@ public class PathFollow : MonoBehaviour
         {
             target[t] = Path[t].transform.position;
         }
-<<<<<<< Updated upstream
-=======
-        */
+
+        /*
 
         movement_flag = false;
 
@@ -116,7 +115,7 @@ public class PathFollow : MonoBehaviour
         Static_Button_Info.Down = false;
         Static_Button_Info.Left = false;
         Static_Button_Info.Right = false;
-        */
+        
         UI_Directions = GameObject.FindGameObjectsWithTag("UI_Directions");
 
 
@@ -156,8 +155,8 @@ public class PathFollow : MonoBehaviour
 
         //Test
         //down = true;
+        */
 
->>>>>>> Stashed changes
     }
     
     // Update is called once per frame
@@ -176,6 +175,7 @@ public class PathFollow : MonoBehaviour
         //Converts vector3 positions to vector2. Vector3 positions don't work for some reason.
         else
         {
+            /*
             Vector2 this_pos = new Vector2(transform.position.x, transform.position.y);
             Vector2 target_pos = new Vector2(target[current].x, target[current].y);
             if (this_pos != target_pos)
@@ -188,6 +188,7 @@ public class PathFollow : MonoBehaviour
                 current = (current + 1);
                 clock.Ticker();
             }
+            */
         }
     
     }

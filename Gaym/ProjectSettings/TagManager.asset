@@ -4,17 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
-  - Node
-  - Map
-<<<<<<< Updated upstream
-=======
   - MapLocationalNode
   - UI_Directions
-  - Truck
-  - Line
+  - Map
+  - Node
   - Texty
->>>>>>> Stashed changes
+  - Line
+  - Truck
   layers:
   - Default
   - TransparentFX
@@ -24,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - LayerBottom
-  - LayerMiddle
-  - LayerTop
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -49,21 +45,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 1303911271
-    locked: 0
-  - name: Map
-    uniqueID: 1387486915
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: top
-    uniqueID: 231663189
+  - name: Top
+    uniqueID: 1712969367
     locked: 0
-  - name: 2
-    uniqueID: 3405170911
-    locked: 0
-  - name: 3
-    uniqueID: 375396737
+  - name: Bottom
+    uniqueID: 657074369
     locked: 0

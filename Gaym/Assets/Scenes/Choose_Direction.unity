@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 724049619}
   - component: {fileID: 724049618}
   - component: {fileID: 724049617}
+  - component: {fileID: 724049620}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -269,6 +270,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724049620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724049616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4284d92ead647d4ea3cdfe6ca1812a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &902941614
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +371,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 375396737
+  m_SortingLayerID: 657074369
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &902941619
@@ -397,7 +410,6 @@ GameObject:
   - component: {fileID: 914851057}
   - component: {fileID: 914851056}
   - component: {fileID: 914851058}
-  - component: {fileID: 914851059}
   m_Layer: 5
   m_Name: Down Arrow
   m_TagString: UI_Directions
@@ -505,8 +517,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 914851059}
-        m_MethodName: Move_the_Truck
+      - m_Target: {fileID: 1703379603}
+        m_MethodName: OnClickDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -518,21 +530,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &914851059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914851054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44b99e7d53613545b76cf84bca59711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 914851054}
-  Buttons: []
-  rb: {fileID: 0}
 --- !u!1 &946513091
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +590,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1703379602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703379604}
+  - component: {fileID: 1703379603}
+  m_Layer: 0
+  m_Name: ArrowHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1703379603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703379602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f087478f993044c933f6bbb306c4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1703379604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703379602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -296.18112, y: 175.01494, z: -12.310903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767207518
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +645,6 @@ GameObject:
   - component: {fileID: 1767207521}
   - component: {fileID: 1767207520}
   - component: {fileID: 1767207522}
-  - component: {fileID: 1767207523}
   m_Layer: 5
   m_Name: Right Arrow
   m_TagString: UI_Directions
@@ -713,8 +752,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1767207523}
-        m_MethodName: Move_the_Truck
+      - m_Target: {fileID: 1703379603}
+        m_MethodName: OnClickRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -726,21 +765,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1767207523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767207518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44b99e7d53613545b76cf84bca59711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 1767207518}
-  Buttons: []
-  rb: {fileID: 0}
 --- !u!1 &1915729760
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +777,6 @@ GameObject:
   - component: {fileID: 1915729763}
   - component: {fileID: 1915729762}
   - component: {fileID: 1915729764}
-  - component: {fileID: 1915729765}
   m_Layer: 5
   m_Name: Left Arrow
   m_TagString: UI_Directions
@@ -861,8 +884,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1915729765}
-        m_MethodName: Move_the_Truck
+      - m_Target: {fileID: 1703379603}
+        m_MethodName: OnClickLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -874,21 +897,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1915729765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915729760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44b99e7d53613545b76cf84bca59711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 1915729760}
-  Buttons: []
-  rb: {fileID: 0}
 --- !u!1 &1942439765
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +909,6 @@ GameObject:
   - component: {fileID: 1942439768}
   - component: {fileID: 1942439767}
   - component: {fileID: 1942439769}
-  - component: {fileID: 1942439770}
   m_Layer: 5
   m_Name: Up Arrow
   m_TagString: UI_Directions
@@ -1009,8 +1016,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1942439770}
-        m_MethodName: Move_the_Truck
+      - m_Target: {fileID: 1703379603}
+        m_MethodName: OnClickUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1022,18 +1029,3 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1942439770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942439765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44b99e7d53613545b76cf84bca59711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 1942439765}
-  Buttons: []
-  rb: {fileID: 0}
