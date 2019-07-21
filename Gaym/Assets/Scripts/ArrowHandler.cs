@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArrowHandler : MonoBehaviour
 {
 
     private GameObject truck;
+    private Clock clock;
     private Rigidbody2D truckBod;
     private GameObject[] Nodes;
     private Vector2 current, target;
@@ -19,6 +21,8 @@ public class ArrowHandler : MonoBehaviour
         truck = GameObject.FindGameObjectWithTag("Truck");
         Nodes = GameObject.FindGameObjectsWithTag("MapLocationalNode");
         directionChosen = false;
+
+        clock = Object.FindObjectOfType<Clock>();
 
         if (truck == null) { Debug.Log("It's not here"); }
         else if (Nodes == null) { Debug.Log("The nodes aren't here"); }
@@ -50,7 +54,7 @@ public class ArrowHandler : MonoBehaviour
         Debug.Log("Clicked OnClickDown");
         Debug.Log((currentIndex - 3) + " and ");
         Debug.Log(Nodes.Length + "\n");
-        if (currentIndex - 3 > 0)
+        if (currentIndex - 3 >= 0)
         {
             target = Nodes[currentIndex - 3].transform.position;
             directionChosen = true;
@@ -96,6 +100,30 @@ public class ArrowHandler : MonoBehaviour
 
    void Update()
     {
+        if (clock.hour == 10)
+        {
+            enabled = false;
+            SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Single);
+        }
+
+        if (Input.GetKeyDown("down")|| Input.GetKeyDown("s"))
+        {
+            OnClickDown();
+        }
+        if (Input.GetKeyDown("up")|| Input.GetKeyDown("w"))
+        {
+            OnClickUp();
+        }
+
+        if (Input.GetKeyDown("left") || Input.GetKeyDown("a"))
+        {
+            OnClickLeft();
+        }
+        if (Input.GetKeyDown("right") || Input.GetKeyDown("d"))
+        {
+            OnClickRight();
+        }
+
         if (directionChosen)
         {
             Vector2 moving = Vector2.Lerp(current, target, 1);
@@ -103,6 +131,7 @@ public class ArrowHandler : MonoBehaviour
             if ((int)truck.transform.position.x == (int)target.x &&
                 (int)truck.transform.position.y == (int)target.y)
             {
+                clock.Ticker();
                 Debug.Log("I'm inside check");
                 directionChosen = false;
                 assessUpdatedPos();

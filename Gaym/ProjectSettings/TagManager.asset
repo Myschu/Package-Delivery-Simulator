@@ -11,6 +11,7 @@ TagManager:
   - Texty
   - Line
   - Truck
+  - Clock
   layers:
   - Default
   - TransparentFX
