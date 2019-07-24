@@ -100,7 +100,7 @@ public class ArrowHandler : MonoBehaviour
 
    void Update()
     {
-        if (clock.hour == 10)
+        if (clock.hour%12 == 6)
         {
             enabled = false;
             SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Single);
@@ -131,7 +131,7 @@ public class ArrowHandler : MonoBehaviour
             if ((int)truck.transform.position.x == (int)target.x &&
                 (int)truck.transform.position.y == (int)target.y)
             {
-                clock.Ticker();
+                clock.Ticker(5);
                 Debug.Log("I'm inside check");
                 directionChosen = false;
                 assessUpdatedPos();

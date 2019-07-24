@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 52
+  controlID: 32
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 78
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 54
+  controlID: 79
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,20 +337,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/SimpleTextures
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/SimpleTextures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Documents\Gaym Proj\Gaym\Gaym
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44340000
-    m_LastClickedID: 13380
-    m_ExpandedIDs: 000000000a3400000c3400000e34000010340000123400001434000016340000183400001a3400001c3400001e34000000ca9a3b
+    m_SelectedIDs: 36340000
+    m_LastClickedID: 13366
+    m_ExpandedIDs: 00000000fa330000fc330000fe33000000340000023400000434000006340000083400000a3400000c3400000e34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a3400000c3400000e34000010340000123400001434000016340000183400001a3400001c3400001e340000
+    m_ExpandedIDs: 00000000fa330000fc330000fe33000000340000023400000434000006340000083400000a3400000c3400000e340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3e2f0000
+      m_SelectedIDs: ee360000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9af9ffffdcfaffff5cfbffff
+      m_ExpandedIDs: 18f4ffff22f5ffff24f9ffff70f9ffffdaf9fffff4f9ffff6efaffff70faffff7efbfffff4ffffff2e3b00004040000052400000ec450000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 563.053, y: 282.1158, z: -325.58923}
+    m_Target: {x: 714.5061, y: 392.39832, z: -61730.957}
     speed: 2
-    m_Value: {x: 563.053, y: 282.1158, z: -325.58923}
+    m_Value: {x: 714.5061, y: 392.39832, z: -61730.957}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -597,9 +597,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 667.42786
+    m_Target: 492.80087
     speed: 2
-    m_Value: 667.42786
+    m_Value: 492.80087
   m_Ortho:
     m_Target: 1
     speed: 2

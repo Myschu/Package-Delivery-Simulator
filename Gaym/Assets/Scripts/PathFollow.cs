@@ -162,7 +162,7 @@ public class PathFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (clock.hour == 10)
+        if (clock.hour == 6)
         {
             enabled = false;
             SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Additive);
