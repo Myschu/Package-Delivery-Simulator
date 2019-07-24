@@ -10,7 +10,7 @@ public class NewDay : MonoBehaviour
     void Start()
     {
         Today = GetComponent<Text>();
-        Today.text = "Day " + DayCount.Instance.Day;
+        Today.text = "Day " + DayCount.Instance.Day + "\n" + "Current Balance: " + Money.Instance.money;
     }
 
 }
