@@ -22,8 +22,8 @@ public class Clock : MonoBehaviour {
 
     }
 
-    public void Ticker() {
-
+    public void Ticker(int minutes_passed) {
+        /*
         //ClockHandHourTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
         //ClockHandHourTransform.RotateAround(new Vector3(-322.0f, 114.0f, 0.0f), Vector3.forward, 180*Time.deltaTime);
         ClockHandHourTransform.Rotate(0, 0, -15, Space.Self);
@@ -40,11 +40,56 @@ public class Clock : MonoBehaviour {
             hour += 1;
         }
 
+        if( hour % 12 == 0 )
+
         string hoursString = Mathf.Floor(hour%12).ToString("00");
 
         string minutesString = Mathf.Floor(min%60).ToString("00");
 
         TimeText.text = hoursString + ":" + minutesString;
+        }
+        public void Ticker(int extra)
+         {
+        if (extra == 0) { Ticker(); }
+        else
+        {*/
+
+
+            string hoursString = "";
+            string minutesString = "";
+
+            //int minutes_passed = 0 + extra;
+            float minutes_degrees = -6.0f * minutes_passed;
+            float hours_degrees = -0.5f * minutes_passed;
+
+
+            ClockHandHourTransform.Rotate(0, 0, hours_degrees, Space.Self);
+            ClockHandMinTransform.Rotate(0, 0, minutes_degrees, Space.Self);
+
+            min += minutes_passed;
+
+            if (min >= 60)
+            {
+                hour++;
+                min = min - 60;
+            }
+
+            if (hour%12 == 0)
+            {
+                hoursString = "12";
+            }
+            else
+            {
+                hoursString = Mathf.Floor(hour % 12).ToString("00");
+            }
+
+            minutesString = Mathf.Floor(min % 60).ToString("00");
+
+            TimeText.text = hoursString + ":" + minutesString;
+
+        
+
+
     }
 
 }

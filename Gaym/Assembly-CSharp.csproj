@@ -62,8 +62,11 @@
      <Compile Include="Assets\Scripts\GenerateDeliveries.cs" />
      <Compile Include="Assets\Scripts\GenerateLine.cs" />
      <Compile Include="Assets\Scripts\Get_Position.cs" />
+     <Compile Include="Assets\Scripts\Houses.cs" />
      <Compile Include="Assets\Scripts\LoadArrows.cs" />
      <Compile Include="Assets\Scripts\Map.cs" />
+     <Compile Include="Assets\Scripts\Marker720.cs" />
+     <Compile Include="Assets\Scripts\Money.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\NewDay.cs" />
      <Compile Include="Assets\Scripts\Node.cs" />

@@ -45,7 +45,7 @@ public static class PackageList
         foreach (Package package in packages)
         {
             Debug.Log(package.get_type() + ' ' + package.get_condition() + "\n");
-            yes1 += package.get_type() + ' ' + package.get_condition() + "\n";
+            yes1 += package.get_type() + ' ' + package.get_condition() + ' ' + package.get_cost() + "\n";
         }
         
         //yes1 += "Package" + count++ +"\n";

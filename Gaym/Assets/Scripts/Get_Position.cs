@@ -67,11 +67,16 @@ public class Get_Position : MonoBehaviour
         Debug.Log(UI_Image_DOWN.transform.position);
 
 
-
+        /*
         UI_Image_DOWN.transform.position = thisObject.transform.position + new Vector3(0, -60, 0);
         UI_Image_UP.transform.position = thisObject.transform.position + new Vector3(0, 60, 0);
         UI_Image_LEFT.transform.position = thisObject.transform.position + new Vector3(-60, 0, 0);
         UI_Image_RIGHT.transform.position = thisObject.transform.position + new Vector3(60, 0, 0);
+        */
+        UI_Image_DOWN.transform.position = anchorPoint.transform.position + new Vector3(0, -60, 0);
+        UI_Image_UP.transform.position = anchorPoint.transform.position + new Vector3(0, 60, 0);
+        UI_Image_LEFT.transform.position = anchorPoint.transform.position + new Vector3(-60, 0, 0);
+        UI_Image_RIGHT.transform.position = anchorPoint.transform.position + new Vector3(60, 0, 0);
 
 
         //Debug.Log(UI_Image_.transform.position);
@@ -79,15 +84,5 @@ public class Get_Position : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (truck != null)
-        {
-            if (!(truck.transform.Equals(original)) && truck.GetComponent<Rigidbody2D>().velocity.Equals(new Vector2(0, 0)))
-            {
-                //Start();
-            }
-        }
-    }
+   
 }

@@ -152,16 +152,17 @@ public class PathFollow : MonoBehaviour
         down = Static_Button_Info.Down;
         left = Static_Button_Info.Left;
         right = Static_Button_Info.Right;
-        */
+
         //Test
         //down = true;
-        
+        */
+
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (clock.hour == 10)
+        if (clock.hour == 6)
         {
             enabled = false;
             SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Additive);
@@ -174,6 +175,7 @@ public class PathFollow : MonoBehaviour
         //Converts vector3 positions to vector2. Vector3 positions don't work for some reason.
         else
         {
+            /*
             Vector2 this_pos = new Vector2(transform.position.x, transform.position.y);
             Vector2 target_pos = new Vector2(target[current].x, target[current].y);
             if (this_pos != target_pos)
@@ -186,6 +188,7 @@ public class PathFollow : MonoBehaviour
                 current = (current + 1);
                 clock.Ticker();
             }
+            */
         }
     
     }
