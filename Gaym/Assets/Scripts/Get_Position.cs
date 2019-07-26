@@ -84,15 +84,5 @@ public class Get_Position : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (truck != null)
-        {
-            if (!(truck.transform.Equals(original)) && truck.GetComponent<Rigidbody2D>().velocity.Equals(new Vector2(0, 0)))
-            {
-                //Start();
-            }
-        }
-    }
+   
 }
