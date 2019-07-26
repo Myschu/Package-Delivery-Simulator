@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Choose_Direction.unity
     guid: 88f5260f5e3fdc348aa30ce24c6b95a0
+  - enabled: 1
+    path: Assets/Scenes/Houses_Planning.unity
+    guid: c17de9f7c16bc134c95c4f8eefe829f6
+  - enabled: 1
+    path: Assets/Scenes/Houses_Pathing.unity
+    guid: c15d4892c75498649873fb1b0f42d1b9
   m_configObjects: {}

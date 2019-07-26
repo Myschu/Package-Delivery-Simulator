@@ -9,6 +9,7 @@ public class LoadArrows : MonoBehaviour
     void Start()
     {
         SceneManager.LoadScene("Choose_Direction", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Houses_Pathing", LoadSceneMode.Additive);
     }
 
 }
