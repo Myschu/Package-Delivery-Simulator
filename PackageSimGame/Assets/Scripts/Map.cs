@@ -28,9 +28,11 @@ public class Map : MonoBehaviour
     public Material line_material;
     public string TagName = "Node";
     public string TagName2 = "Path";
+    public GameObject[] Paths;
     public GameObject[] Buttons;
     //public GameObject[] Paths;
     public GameObject Origin;
+    private int currentIndex, previousIndex;
     public List<GameObject> LastSelected = new List<GameObject>();
     void Start()
     {
@@ -47,6 +49,7 @@ public class Map : MonoBehaviour
     private void Update()
     {
         Buttons = GameObject.FindGameObjectsWithTag(TagName);
+
         if (LastSelected.Count == 0)
         {
             foreach (GameObject node in Buttons)
