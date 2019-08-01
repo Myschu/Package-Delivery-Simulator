@@ -30,7 +30,7 @@ public static class PackageList
 
         
         //DontDestroyOnLoad(textObject);
-        int numOfPackages = 1; //Just 1 for testing
+        int numOfPackages = Random.Range(6,8); 
 
         for (int i = 0; i < numOfPackages; i++)
         {
