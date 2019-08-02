@@ -8,6 +8,7 @@ public static class PackageList
     //public GameObject textObject;
     static Text package_list;
     static string yes1;
+    public static int numOfPackages;
     //static int count = 0;
     public static List<Package> packages = new List<Package>();
 
@@ -28,9 +29,11 @@ public static class PackageList
             Debug.Log("Override");
         }
 
-        
+
         //DontDestroyOnLoad(textObject);
-        int numOfPackages = 1; //Just 1 for testing
+        //int numOfPackages = 1; //Just 1 for testing
+
+        numOfPackages = Random.Range(6, 8);
 
         for (int i = 0; i < numOfPackages; i++)
         {
