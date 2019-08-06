@@ -15,6 +15,11 @@ TagManager:
   - House
   - HouseHandler
   - PackageAssignmentHandler
+  - ArrowHandler
+  - Path
+  - To_Map_Button
+  - House_Pathing_Text
+  - House_Pathing_Object
   layers:
   - Default
   - TransparentFX

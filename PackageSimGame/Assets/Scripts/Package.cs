@@ -5,13 +5,34 @@ using UnityEngine;
 public class Package
 {
 
-    static string[] types = { "mail", "package", "heavy" };
-    static string[] conditions = { "none", "signature", "fragile", "signature and fragile" };
+    static string[] types = { "letter", "package", "heavy package" };
+    static string[] conditions = { "none", "requires signature", "is fragile", "requires signature and is fragile" };
 
     private string type;
     private string condition;
     private int cost = 0;
+    private int extraTime = 0;
     private GameObject destination;
+
+
+    public string getType()
+    {
+        return type;
+    }
+    public string getCondition()
+    {
+        return condition;
+    }
+    public int getCost()
+    {
+        return cost;
+    }
+    public int getExtraTime()
+    {
+        return extraTime;
+    }
+
+
     public void Generate()
     {
         int typeRoll = roll_type();
@@ -21,25 +42,29 @@ public class Package
         condition = conditions[conditionRoll];
 
         //destination = 
-        if (type == "mail")
+        if (type == "letter")
         {
             cost += 1;
+
         }
         else if (type == "package")
         {
+            cost += 4;
+        }
+        else if (type == "heavy package")
+        {
+            cost += 10;
+            extraTime += 15;
+        }
+        if (condition == "requires signature")
+        {
             cost += 3;
+            extraTime += 5;
         }
-        else if (type == "heavy")
-        {
-            cost += 5;
-        }
-        if (condition == "signature")
+        else if (condition == "is fragile")
         {
             cost += 3;
-        }
-        else if (condition == "fragile")
-        {
-            cost += 5;  
+            extraTime += 10;
         }
     }
 

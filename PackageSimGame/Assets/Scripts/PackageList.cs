@@ -7,33 +7,38 @@ public static class PackageList
 {
     //public GameObject textObject;
     static Text package_list;
-    static string yes1;
+    static string yes1, textToDisplay;
+    public static bool hasList = false;
     public static int numOfPackages;
     //static int count = 0;
     public static List<Package> packages = new List<Package>();
 
+    private static  List<House_Trigger> nodes; 
+
     public static void Start()
     {
-
-
-        yes1 = "";
+        nodes = Object.FindObjectOfType<PackageAssigner>().getHouses();
+        packages.RemoveAll(item => item == null);
+        textToDisplay = "";
+        
+        //yes1 = "";
         GameObject textObject = GameObject.FindGameObjectWithTag("Texty");
 
         package_list = textObject.GetComponent<Text>();
-            Debug.Log("I have the old text box?");
-            Debug.Log(Object.FindObjectOfType<Text>().text);
-            Debug.Log(package_list.text);
+            //Debug.Log("I have the old text box?");
+           // Debug.Log(Object.FindObjectOfType<Text>().text);
+            //Debug.Log(package_list.text);
         if (package_list==null)
         {
             package_list = textObject.GetComponent<Text>();
             Debug.Log("Override");
         }
 
-
+       
         //DontDestroyOnLoad(textObject);
-        //int numOfPackages = 1; //Just 1 for testing
+        numOfPackages = 3; //Just 1 for testing
 
-        numOfPackages = Random.Range(6, 8);
+        //numOfPackages = Random.Range(6, 8);
 
         for (int i = 0; i < numOfPackages; i++)
         {
@@ -45,16 +50,15 @@ public static class PackageList
             package_list.GetComponent<Text>().text += package.get_type() + ' ' + package.get_condition() + "\n";
         }
         */
-        foreach (Package package in packages)
-        {
-            Debug.Log(package.get_type() + ' ' + package.get_condition() + "\n");
-            yes1 += package.get_type() + ' ' + package.get_condition() + ' ' + package.get_cost() + "\n";
-        }
+        int index = 0;
+        
         
         //yes1 += "Package" + count++ +"\n";
 
-        package_list.text += yes1;
+        package_list.text += textToDisplay;
     }
+
+   
 
 
     private static void PackageGenerate() {

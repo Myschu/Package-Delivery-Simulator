@@ -8,11 +8,18 @@ public class Node : MonoBehaviour
     public string TagName = "Map";
     public bool NodeOn = false;
     public bool Interactable = false;
+    public bool isOn;
+    Color[] Colors = { Color.white, Color.red, Color.cyan, Color.green };
+    public Color color;
     public GameObject Button;
     public GameObject Map;
+    private int color_index = 0;
+    private int clicked_on = 0;
     private int tog;
     void Start()
     {
+        GameObject textbox = GameObject.FindGameObjectWithTag("House_Pathing_Text");
+        textbox.transform.position = new Vector2(350, 250);
         tog = 0;
         Map = GameObject.FindGameObjectWithTag(TagName);
     }
@@ -20,8 +27,7 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Button.GetComponent<Toggle>().isOn = NodeOn;
-        Button.GetComponent<Toggle>().interactable = Interactable;
+        Button.GetComponent<Button>().interactable = Interactable;
         Invoke("activate", 1.0f);
 
 
@@ -33,31 +39,38 @@ public class Node : MonoBehaviour
             if (tog == 0)
             {
                 tog++;
-                Button.GetComponent<Toggle>().onValueChanged.AddListener(delegate
+                Button.GetComponent<Button>().onClick.AddListener(delegate
                 {
-                    TaskOnClick(NodeOn);
-
+                    TaskOnClick();
                 });
             }
         }
     }
 
-    void TaskOnClick(bool val)
+    void TaskOnClick()
     {
         Debug.Log("clicked");
-        val = !val;
         Map map = Map.GetComponent<Map>();
-        if (val)
+        int index = System.Array.IndexOf(map.Buttons, Button);
+        int size = map.LastSelected.Count;
+        if (size == 0)
         {
-            map.LastSelected.Add(Button);
+            map.LastSelected.Add(index);
+            color_index += 1;
+        }
+        else if (index != map.LastSelected[size-1])
+        {
+            map.LastSelected.Add(index);
+            color_index += 1;
 
         }
-        else
+        else 
         {
-            map.LastSelected.Remove(Button);
+            map.LastSelected.RemoveAt(map.LastSelected.Count - 1);
+            color_index -= 1;
         }
 
-        NodeOn = val;
         tog = 0;
+        Button.GetComponent<Image>().color = Colors[color_index % 4];
     }
 }

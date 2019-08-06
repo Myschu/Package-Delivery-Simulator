@@ -33,7 +33,7 @@ public class Map : MonoBehaviour
     //public GameObject[] Paths;
     public GameObject Origin;
     private int currentIndex, previousIndex;
-    public List<GameObject> LastSelected = new List<GameObject>();
+    public List<int> LastSelected = new List<int>();
     void Start()
     {
         
@@ -67,8 +67,8 @@ public class Map : MonoBehaviour
             }
             int number = LastSelected.Count;
             int size_of_buttons = Buttons.Length;
-            GameObject Button = LastSelected[number - 1];
-            Origin = LastSelected[0];
+            GameObject Button = Buttons[LastSelected[number - 1]];
+            Origin = Buttons[LastSelected[0]];
             Node button = Origin.GetComponent<Node>();
             button.NodeOn = true;
             int index = System.Array.IndexOf(Buttons, Button);

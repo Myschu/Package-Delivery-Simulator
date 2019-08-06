@@ -12,9 +12,9 @@ public class House_Trigger : MonoBehaviour
     private Stack<Package> assigned_packages = new Stack<Package>();
     private Stack<int> packageIndex = new Stack<int>();
 
-   void Awake()
+   public void Awake()
     {
-        extraTime = Random.Range(0, 3);
+        extraTime = 0;
         clock = Object.FindObjectOfType<Clock>();
         clockFlag = true;
         num_Packages = 0;
@@ -55,14 +55,32 @@ public class House_Trigger : MonoBehaviour
   void OnTriggerEnter2D(Collider2D Truck)
     {
         string thisObj = name;
-
-        if (hasPackages())
+        int howManyLoops = 0;
+        while (hasPackages())
         {
-            popPackage();
+            Package pack = popPackage();
+
+
+            extraTime = pack.getExtraTime();
+            Money.Instance.money += pack.getCost();
+
+
             int index = popIndex();
-            PackageList.packages.RemoveAt(index);
+            Debug.Log("Index popped = " + index);
+
+            Debug.Log("\nPackage at index = " + PackageList.packages[index].getCondition() + " " +PackageList.packages[index].getType());
+
+            PackageList.packages[index] = null;
             GameObject g = GameObject.FindGameObjectWithTag("PackageAssignmentHandler");
             g.GetComponent<PackageAssigner>().RemoveText(index);
+
+            howManyLoops++;
+
+        }
+        
+        if (howManyLoops == 0)
+        {
+            extraTime = 0;
         }
 
 

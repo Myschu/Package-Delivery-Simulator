@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Look_Map.unity
     guid: 76051db717f9a6f43b5800bb6a29f87b
+  - enabled: 1
+    path: Assets/Scenes/Reset_Button.unity
+    guid: 5faa56dbaf51cab46bad21e01a90d1f9
+  - enabled: 1
+    path: Assets/Scenes/Winning.unity
+    guid: 4a78e8135053a0348b56386fd643fd4b
+  - enabled: 1
+    path: Assets/Scenes/Game_Over.unity
+    guid: 7144b42b7154ab742a0bab45e2a38726
   m_configObjects: {}

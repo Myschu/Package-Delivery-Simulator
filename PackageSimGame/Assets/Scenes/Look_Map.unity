@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -73.3, y: -32.9}
+  m_SizeDelta: {x: 20.7, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &584559296
 SpriteRenderer:
@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424.7, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 414, y: -184}
+  m_SizeDelta: {x: 250.18, y: 82.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688721835
 MonoBehaviour:
@@ -493,8 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e4b0fee49d54043b7ec16e3285c38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisScene:
-    m_Handle: 7
+  button: {fileID: 0}
 --- !u!1 &1634137346
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: Return to Road
 --- !u!222 &1634137349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -651,7 +650,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &1760874983
 RectTransform:

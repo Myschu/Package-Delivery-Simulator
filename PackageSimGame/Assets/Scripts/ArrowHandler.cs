@@ -12,10 +12,14 @@ public class ArrowHandler : MonoBehaviour
     private GameObject[] Nodes, houses;
     private Vector2 current, target;
     private int currentIndex, previousIndex, extraTime;
-    private bool directionChosen,clockFlag;
+    private bool directionChosen,clockFlag, currentScene;
+
     
 
-
+    public void setScene(bool setting)
+    {
+        currentScene = setting;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class ArrowHandler : MonoBehaviour
         truck = GameObject.FindGameObjectWithTag("Truck");
         Nodes = GameObject.FindGameObjectsWithTag("MapLocationalNode");
         directionChosen = false;
+        currentScene = true;
 
         clock = Object.FindObjectOfType<Clock>();
 
@@ -55,7 +60,7 @@ public class ArrowHandler : MonoBehaviour
     
     public void OnClickUp()
     {
-        if (!directionChosen)
+        if ((!directionChosen) && currentScene)
         {
             previousIndex = currentIndex;
             Debug.Log("Clicked OnClickUp");
@@ -70,7 +75,7 @@ public class ArrowHandler : MonoBehaviour
     }
     public void OnClickDown()
     {
-        if (!directionChosen)
+        if ((!directionChosen) && currentScene)
         {
             previousIndex = currentIndex;
             Debug.Log("Clicked OnClickDown");
@@ -86,7 +91,7 @@ public class ArrowHandler : MonoBehaviour
     }
     public void OnClickRight()
     {
-        if (!directionChosen)
+        if ((!directionChosen) && currentScene)
         {
             previousIndex = currentIndex;
             Debug.Log("Clicked OnClickRight");
@@ -100,7 +105,7 @@ public class ArrowHandler : MonoBehaviour
     }
     public void OnClickLeft()
     {
-        if (!directionChosen)
+        if ((!directionChosen)&&currentScene)
         {
             previousIndex = currentIndex;
             Debug.Log("Clicked OnClickLeft");
@@ -141,24 +146,25 @@ public class ArrowHandler : MonoBehaviour
             enabled = false;
             SceneManager.LoadScene("End_Day_Scene", LoadSceneMode.Single);
         }
+        
+            if ((Input.GetKeyDown("down") || Input.GetKeyDown("s")))
+            {
+                OnClickDown();
+            }
+            if (Input.GetKeyDown("up") || Input.GetKeyDown("w"))
+            {
+                OnClickUp();
+            }
 
-        if ((Input.GetKeyDown("down")|| Input.GetKeyDown("s")))
-        {
-            OnClickDown();
-        }
-        if (Input.GetKeyDown("up")|| Input.GetKeyDown("w"))
-        {
-            OnClickUp();
-        }
-
-        if (Input.GetKeyDown("left") || Input.GetKeyDown("a"))
-        {
-            OnClickLeft();
-        }
-        if (Input.GetKeyDown("right") || Input.GetKeyDown("d"))
-        {
-            OnClickRight();
-        }
+            if (Input.GetKeyDown("left") || Input.GetKeyDown("a"))
+            {
+                OnClickLeft();
+            }
+            if (Input.GetKeyDown("right") || Input.GetKeyDown("d"))
+            {
+                OnClickRight();
+            }
+        
 
         if (directionChosen)
         {

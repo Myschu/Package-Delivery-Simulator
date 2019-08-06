@@ -58,7 +58,9 @@
      <Compile Include="Assets\Scripts\ChangeScene2.cs" />
      <Compile Include="Assets\Scripts\ChangeScene3.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\Daily_Expenses.cs" />
      <Compile Include="Assets\Scripts\DayCount.cs" />
+     <Compile Include="Assets\Scripts\End_Stats.cs" />
      <Compile Include="Assets\Scripts\GenerateDeliveries.cs" />
      <Compile Include="Assets\Scripts\GenerateLine.cs" />
      <Compile Include="Assets\Scripts\Get_Position.cs" />
@@ -74,7 +76,10 @@
      <Compile Include="Assets\Scripts\Package.cs" />
      <Compile Include="Assets\Scripts\PackageAssigner.cs" />
      <Compile Include="Assets\Scripts\PackageList.cs" />
+     <Compile Include="Assets\Scripts\PathTime.cs" />
      <Compile Include="Assets\Scripts\Paths.cs" />
+     <Compile Include="Assets\Scripts\Rent.cs" />
+     <Compile Include="Assets\Scripts\Reset.cs" />
      <Compile Include="Assets\Scripts\Return.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Toggle.cs" />

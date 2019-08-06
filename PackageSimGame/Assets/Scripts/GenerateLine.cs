@@ -33,12 +33,12 @@ public class GenerateLine : MonoBehaviour
 
     // Start is called before the first frame update
     void Update()
-    {
+    {/*
         if (!sceneChanged)
         {
             Map = GameObject.FindGameObjectWithTag("Map");
             Map map = Map.GetComponent<Map>();
-            last_travelled_list = map.LastSelected;
+            //last_travelled_list = map.LastSelected;
 
             list_as_string = new string[last_travelled_list.Capacity];
 
