@@ -25,7 +25,25 @@ public class ArrowHandler : MonoBehaviour
     {
         extraTime = 0;
         truck = GameObject.FindGameObjectWithTag("Truck");
-        Nodes = GameObject.FindGameObjectsWithTag("MapLocationalNode");
+        
+
+
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("MapLocationalNode");
+        Nodes = new GameObject[temp.Length];
+        int iterate = 0;
+        while (iterate < Nodes.Length)
+        {
+            foreach (GameObject node in temp)
+            {
+                if (node.GetComponent<LocationalNodeOrder>().order == iterate)
+                {
+                    Nodes[iterate] = node;
+                }
+            }
+            iterate++;
+        }
+
+
         directionChosen = false;
         currentScene = true;
 
@@ -70,6 +88,7 @@ public class ArrowHandler : MonoBehaviour
             {
                 target = Nodes[currentIndex + 3].transform.position;
                 directionChosen = true;
+                Moves.Instance.moves++;
             }
         }
     }
@@ -85,6 +104,8 @@ public class ArrowHandler : MonoBehaviour
             {
                 target = Nodes[currentIndex - 3].transform.position;
                 directionChosen = true;
+
+                Moves.Instance.moves++;
             }
         }
         
@@ -100,6 +121,8 @@ public class ArrowHandler : MonoBehaviour
             {
                 target = Nodes[currentIndex + 1].transform.position;
                 directionChosen = true;
+
+                Moves.Instance.moves++;
             }
         }
     }
@@ -114,6 +137,8 @@ public class ArrowHandler : MonoBehaviour
             {
                 target = Nodes[currentIndex - 1].transform.position;
                 directionChosen = true;
+
+                Moves.Instance.moves++;
             }
         }
     }

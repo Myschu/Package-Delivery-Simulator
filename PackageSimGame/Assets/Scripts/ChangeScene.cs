@@ -10,6 +10,7 @@ public class ChangeScene : MonoBehaviour
     {
         
             SceneManager.LoadScene("Reset_Button", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Moves", LoadSceneMode.Additive);
         
     }
 

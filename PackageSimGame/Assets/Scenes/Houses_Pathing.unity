@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 4
 --- !u!61 &36904627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -273,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 0
 --- !u!1 &89545992
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 6
 --- !u!61 &89545995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -399,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 3
 --- !u!61 &727443082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -541,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 5
 --- !u!61 &1115091408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -617,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 9
 --- !u!61 &1203114727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -693,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 15
 --- !u!61 &1351966486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -769,6 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 12
 --- !u!61 &1397227922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -845,6 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 2
 --- !u!61 &1398776375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,6 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 13
 --- !u!61 &1401154767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -997,6 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 7
 --- !u!61 &1422593610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1189,6 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 10
 --- !u!61 &1549722642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1377,6 +1389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 8
 --- !u!61 &1827728607
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1497,6 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 11
 --- !u!61 &1879933631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1539,7 +1553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2041447228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1659,6 +1673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 16
 --- !u!61 &2051517042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1735,6 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 14
 --- !u!61 &2068294102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1811,6 +1827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseHandler: {fileID: 0}
+  order: 1
 --- !u!61 &2097312498
 BoxCollider2D:
   m_ObjectHideFlags: 0

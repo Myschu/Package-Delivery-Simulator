@@ -306,6 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466922434}
+  - component: {fileID: 466922435}
   m_Layer: 0
   m_Name: Button12
   m_TagString: MapLocationalNode
@@ -327,6 +328,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466922435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466922433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 7
 --- !u!1 &547482807
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547482808}
+  - component: {fileID: 547482809}
   m_Layer: 0
   m_Name: Button01
   m_TagString: MapLocationalNode
@@ -357,6 +372,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547482809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547482807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 3
 --- !u!1 &556933454
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 767863493}
+  - component: {fileID: 767863494}
   m_Layer: 0
   m_Name: Button00
   m_TagString: MapLocationalNode
@@ -583,6 +612,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &767863494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767863492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 0
 --- !u!1 &923432026
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 923432027}
+  - component: {fileID: 923432028}
   m_Layer: 0
   m_Name: Button22
   m_TagString: MapLocationalNode
@@ -613,6 +656,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923432028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923432026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 8
 --- !u!1 &1003059262
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1003059263}
+  - component: {fileID: 1003059264}
   m_Layer: 0
   m_Name: Button21
   m_TagString: MapLocationalNode
@@ -643,6 +700,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1003059264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003059262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 5
 --- !u!1 &1061472840
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061472841}
+  - component: {fileID: 1061472842}
   m_Layer: 0
   m_Name: Button11
   m_TagString: MapLocationalNode
@@ -673,6 +744,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061472842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061472840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 4
 --- !u!1 &1133902896
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133902897}
+  - component: {fileID: 1133902898}
   m_Layer: 0
   m_Name: Button23
   m_TagString: MapLocationalNode
@@ -703,6 +788,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133902898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133902896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 11
 --- !u!1 &1144917229
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1144917230}
+  - component: {fileID: 1144917231}
   m_Layer: 0
   m_Name: Button13
   m_TagString: MapLocationalNode
@@ -733,6 +832,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144917231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144917229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 10
 --- !u!1 &1146298317
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1154316042}
+  - component: {fileID: 1154316043}
   m_Layer: 0
   m_Name: Button03
   m_TagString: MapLocationalNode
@@ -854,6 +967,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1154316043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154316041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 9
 --- !u!1 &1158579212
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175141268}
+  - component: {fileID: 1175141269}
   m_Layer: 0
   m_Name: Button02
   m_TagString: MapLocationalNode
@@ -1014,6 +1141,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175141269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175141267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 6
 --- !u!1 &1219332604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1219332605}
+  - component: {fileID: 1219332606}
   m_Layer: 0
   m_Name: Button10
   m_TagString: MapLocationalNode
@@ -1044,6 +1185,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1219332606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219332604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 1
 --- !u!1 &1381355589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2092225998}
+  - component: {fileID: 2092225999}
   m_Layer: 0
   m_Name: Button20
   m_TagString: MapLocationalNode
@@ -1610,6 +1765,19 @@ Transform:
   m_Father: {fileID: 556933455}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092225999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092225997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fae59e9bfb66b40a2c4eadff53645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 2
 --- !u!1 &2123087530
 GameObject:
   m_ObjectHideFlags: 0

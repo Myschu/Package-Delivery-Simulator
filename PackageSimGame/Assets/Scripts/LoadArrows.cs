@@ -21,7 +21,7 @@ public class LoadArrows : MonoBehaviour
             houses.GetComponent<House_Trigger>().Awake();
         }
 
-        text.transform.position = new Vector2(980,200);
+        text.transform.position = new Vector2(980,280);
     }
 
 }

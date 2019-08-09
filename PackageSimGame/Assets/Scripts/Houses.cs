@@ -8,7 +8,24 @@ public class Houses : MonoBehaviour
     public GameObject[] House_List;
     private void Start()
     {
-        House_List = GameObject.FindGameObjectsWithTag(TagName);
+        
+
+        GameObject[] temp = GameObject.FindGameObjectsWithTag(TagName);
+        House_List = new GameObject[temp.Length];
+        int iterate = 0;
+        while (iterate < House_List.Length)
+        {
+            foreach (GameObject node in temp)
+            {
+                if (node.GetComponent<House_Trigger>().order == iterate)
+                {
+                    House_List[iterate] = node;
+                }
+            }
+            iterate++;
+        }
+
+
         DontDestroyOnLoad(this);
     }
 }

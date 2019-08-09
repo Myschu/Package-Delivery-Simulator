@@ -9,10 +9,12 @@ ScriptsOnlyBuild:
     - End_Stats
     - GenerateDeliveries
     - Get_Position
-    - House_Shared_Values
+    - Help
     - House_Trigger
     - LoadArrows
+    - LocationalNodeOrder
     - Map
+    - MoveScript
     - NewDay
     - Node
     - PackageAssigner
@@ -65,9 +67,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -108,13 +110,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12976}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,14 +157,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Help.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 10988}
+    - Class: 114
+      Script: {instanceID: 11158}
+    - Class: 114
+      Script: {instanceID: 11198}
+    - Class: 114
+      Script: {instanceID: 11646}
+    - Class: 114
+      Script: {instanceID: 12052}
+    - Class: 114
+      Script: {instanceID: 12570}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13074}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -194,13 +245,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11646}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 12878}
-    - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -231,9 +280,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11646}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -266,11 +315,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,6 +329,43 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Moves.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 10988}
+    - Class: 114
+      Script: {instanceID: 11158}
+    - Class: 114
+      Script: {instanceID: 11646}
+    - Class: 114
+      Script: {instanceID: 12382}
+    - Class: 114
+      Script: {instanceID: 12570}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -319,17 +405,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12336}
+      Script: {instanceID: 12338}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -370,11 +456,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12732}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -417,13 +503,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13074}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -472,11 +560,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12914}
+    - Class: 114
+      Script: {instanceID: 12932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -521,9 +611,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -869,6 +959,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 59532f5f412614fee3014db93a0ddf8b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Moves
+  - hash:
+      serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -917,7 +1013,7 @@ ScriptsOnlyBuild:
     className: ChangeScene
   - hash:
       serializedVersion: 2
-      Hash: a99b403b016192a4705fbe051bbc9217
+      Hash: 8853588abb605cc53b36d317345f15d6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Node
@@ -927,6 +1023,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: bd1456708fc458484616706026bd5ac9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveScript
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
@@ -1019,16 +1121,16 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: cff1b01cb1b61d5ef45056d55ba4cbfe
+      Hash: 1a35b801000a469646465c0d65b1747f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: House_Trigger
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5b6f5445754febbd0976a7b52e2307a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Marker720
+    className: LocationalNodeOrder
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1131,17 +1233,25 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Help
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Today.unity
+  - Assets/Scenes/Houses_Pathing.unity
+  - Assets/Scenes/Houses_Planning.unity
   - Assets/Scenes/Planning.unity
   - Assets/Scenes/Truck_Pathing.unity
   - Assets/Scenes/End_Day_Scene.unity
-  - Assets/Scenes/Today.unity
   - Assets/Scenes/Choose_Direction.unity
-  - Assets/Scenes/Houses_Planning.unity
-  - Assets/Scenes/Houses_Pathing.unity
   - Assets/Scenes/Look_Map.unity
   - Assets/Scenes/Reset_Button.unity
   - Assets/Scenes/Winning.unity
   - Assets/Scenes/Game_Over.unity
-  playerPath: D:/Documents/Gaym Proj/Gaym/PackageSimGame/Gaym.exe
+  - Assets/Scenes/Moves.unity
+  - Assets/Scenes/Help.unity
+  playerPath: D:/Documents/Gaym Proj/Gaym/Release0.1/PackageSimGame.exe

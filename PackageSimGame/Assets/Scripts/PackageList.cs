@@ -36,7 +36,7 @@ public static class PackageList
 
        
         //DontDestroyOnLoad(textObject);
-        numOfPackages = 3; //Just 1 for testing
+        numOfPackages = 5; //Just 1 for testing
 
         //numOfPackages = Random.Range(6, 8);
 

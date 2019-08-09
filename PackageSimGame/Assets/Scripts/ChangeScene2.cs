@@ -11,12 +11,14 @@ public class ChangeScene2 : MonoBehaviour
 
         Object.Destroy(text);
         SceneManager.LoadScene("Reset_Button", LoadSceneMode.Additive);
+
+        SceneManager.LoadScene("Moves", LoadSceneMode.Additive);
     }
     public void ChangeToScene(string SceneToChangeTo)
     {
         SceneManager.LoadScene(SceneToChangeTo, LoadSceneMode.Single);
         DayCount.Instance.Day += 1;
-        Money.Instance.money -= 23;
+        Money.Instance.money -= 8;
         Rent.Instance.rent += 3;
         Daily.Instance.daily_expenses += 20;
 

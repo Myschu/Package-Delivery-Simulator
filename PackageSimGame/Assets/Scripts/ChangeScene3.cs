@@ -8,17 +8,27 @@ public class ChangeScene3 : MonoBehaviour
     void Start()
     {
         bool resetExists = false;
+        bool movesExists = false;
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
             if (SceneManager.GetSceneAt(i).name == "Reset_Button")
             {
                 resetExists = true;
             }
+            if (SceneManager.GetSceneAt(i).name == "Moves")
+            {
+                movesExists = false;
+            }
         }
+
         Debug.Log(resetExists);
         if (!resetExists)
         {
             SceneManager.LoadScene("Reset_Button", LoadSceneMode.Additive);
+        }
+        if (!movesExists)
+        {
+            SceneManager.LoadScene("Moves", LoadSceneMode.Additive);
         }
     }
     public void ChangeToScene(string SceneToChangeTo)
@@ -27,6 +37,7 @@ public class ChangeScene3 : MonoBehaviour
         //SceneManager.LoadScene("Houses_Planning", LoadSceneMode.Additive);
         
             SceneManager.LoadScene("Houses_Pathing", LoadSceneMode.Additive);
+            
            // PackageList.hasList = true;
         
         

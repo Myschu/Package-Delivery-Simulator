@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,9 +47,23 @@ public class Map : MonoBehaviour
             button.Interactable = true;
         }
     }
+    
     private void Update()
     {
-        Buttons = GameObject.FindGameObjectsWithTag(TagName);
+        GameObject[] temp = GameObject.FindGameObjectsWithTag(TagName);
+        Buttons = new GameObject[temp.Length];
+        int iterate = 0;
+        while (iterate < Buttons.Length) {
+            foreach (GameObject node in temp)
+            {
+                if (node.GetComponent<Node>().order == iterate)
+                {
+                    Buttons[iterate] = node;
+                }
+            }
+            iterate++;
+        }
+
 
         if (LastSelected.Count == 0)
         {

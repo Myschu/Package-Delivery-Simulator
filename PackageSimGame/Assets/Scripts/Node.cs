@@ -13,6 +13,7 @@ public class Node : MonoBehaviour
     public Color color;
     public GameObject Button;
     public GameObject Map;
+    public int order;
     private int color_index = 0;
     private int clicked_on = 0;
     private int tog;

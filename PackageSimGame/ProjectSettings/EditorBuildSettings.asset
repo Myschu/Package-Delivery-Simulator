@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Today.unity
+    guid: 038e23f1ac70fa94eb149a15f81dd549
+  - enabled: 1
+    path: Assets/Scenes/Houses_Pathing.unity
+    guid: c15d4892c75498649873fb1b0f42d1b9
+  - enabled: 1
+    path: Assets/Scenes/Houses_Planning.unity
+    guid: c17de9f7c16bc134c95c4f8eefe829f6
+  - enabled: 1
     path: Assets/Scenes/Planning.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -15,17 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/End_Day_Scene.unity
     guid: fa4df983cc8111f4a9c737927d293768
   - enabled: 1
-    path: Assets/Scenes/Today.unity
-    guid: 038e23f1ac70fa94eb149a15f81dd549
-  - enabled: 1
     path: Assets/Scenes/Choose_Direction.unity
     guid: 88f5260f5e3fdc348aa30ce24c6b95a0
-  - enabled: 1
-    path: Assets/Scenes/Houses_Planning.unity
-    guid: c17de9f7c16bc134c95c4f8eefe829f6
-  - enabled: 1
-    path: Assets/Scenes/Houses_Pathing.unity
-    guid: c15d4892c75498649873fb1b0f42d1b9
   - enabled: 1
     path: Assets/Scenes/Look_Map.unity
     guid: 76051db717f9a6f43b5800bb6a29f87b
@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game_Over.unity
     guid: 7144b42b7154ab742a0bab45e2a38726
+  - enabled: 1
+    path: Assets/Scenes/Moves.unity
+    guid: dd39f94bb42f68c4abdbbdce641cba14
+  - enabled: 1
+    path: Assets/Scenes/Help.unity
+    guid: 513544f5f55348646bfa238c77d7950c
   m_configObjects: {}

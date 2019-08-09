@@ -12,6 +12,8 @@ public class House_Trigger : MonoBehaviour
     private Stack<Package> assigned_packages = new Stack<Package>();
     private Stack<int> packageIndex = new Stack<int>();
 
+    public int order;
+
    public void Awake()
     {
         extraTime = 0;

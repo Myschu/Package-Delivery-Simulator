@@ -228,6 +228,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 155218827}
   Map: {fileID: 564599707}
+  order: 9
 --- !u!114 &155218830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +653,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 337786831}
   Map: {fileID: 564599707}
+  order: 7
 --- !u!114 &337786834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,6 +795,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 380311371}
   Map: {fileID: 564599707}
+  order: 8
 --- !u!114 &380311374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +937,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 386236551}
   Map: {fileID: 564599707}
+  order: 6
 --- !u!114 &386236554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,6 +1079,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 504343562}
   Map: {fileID: 564599707}
+  order: 4
 --- !u!114 &504343565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,6 +1405,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 718136951}
   Map: {fileID: 564599707}
+  order: 5
 --- !u!114 &718136954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,6 +1805,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1192491421}
   Map: {fileID: 564599707}
+  order: 0
 --- !u!1 &1216677978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +1990,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1329332114}
   Map: {fileID: 564599707}
+  order: 2
 --- !u!1 &1338476837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2099,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1386253723}
   Map: {fileID: 564599707}
+  order: 11
 --- !u!114 &1386253726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2311,6 +2320,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1433309629}
   Map: {fileID: 564599707}
+  order: 3
 --- !u!114 &1433309632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,6 +2612,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1609103478}
   Map: {fileID: 564599707}
+  order: 10
 --- !u!114 &1609103481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2887,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   Button: {fileID: 1649974525}
   Map: {fileID: 564599707}
+  order: 1
 --- !u!1 &1654816592
 GameObject:
   m_ObjectHideFlags: 0
