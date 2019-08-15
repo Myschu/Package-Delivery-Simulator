@@ -62,10 +62,8 @@
      <Compile Include="Assets\Scripts\DayCount.cs" />
      <Compile Include="Assets\Scripts\End_Stats.cs" />
      <Compile Include="Assets\Scripts\GenerateDeliveries.cs" />
-     <Compile Include="Assets\Scripts\GenerateLine.cs" />
      <Compile Include="Assets\Scripts\Get_Position.cs" />
      <Compile Include="Assets\Scripts\Help.cs" />
-     <Compile Include="Assets\Scripts\House_Shared_Values.cs" />
      <Compile Include="Assets\Scripts\House_Trigger.cs" />
      <Compile Include="Assets\Scripts\Houses.cs" />
      <Compile Include="Assets\Scripts\LoadArrows.cs" />

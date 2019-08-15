@@ -11,59 +11,47 @@ public class PackageAssigner : MonoBehaviour
     List<House_Trigger> nodes;
     int packageNumber;
     private List<string> textboxStuff = new List<string>();
-    // Start is called before the first frame update
 
     public List<House_Trigger> getHouses()
     {
         return nodes;
     } 
+
+    /*Finds all houses and packages and assigns each package to a random house
+    * Additionally, sends info to Textbox to be displayed to player
+         */
     void Start()
     {
         nodes = new List<House_Trigger>();
-        houses = GameObject.FindGameObjectsWithTag("House");
-
-        //packageNumber = Random.Range(6, 8);
+        houses = GameObject.FindGameObjectsWithTag("House");        
         packageNumber = PackageList.numOfPackages;
-
-        //int index = packageNumber;
-        /* Debugging
-        int i = 0;
-        foreach (GameObject haus in houses) {
-            Debug.Log(++i +") "+ haus.name);
-        }
-        */
+        
         int index = 0;
         foreach (Package p in PackageList.packages)
-        //while (index > 0)
         {
             string textToDisplay = "";
-            //Package package = new Package();
-            //package.Generate();
             House_Trigger node = houses[Random.Range(0, 16)].GetComponent<House_Trigger>();
             nodes.Add(node);
             node.pushPackage(p);
             node.pushIndex(index);
-            //node.PackageList.packages.IndexOf(p));
-            if (p.get_condition() == "none")
+            if (p.getCondition() == "none")
             {
-                textToDisplay += "There is a " + p.get_type() + " to be delivered at: " + Address(node.name) + ".\n";
+                textToDisplay += "There is a " + p.getType() + " to be delivered at: " + Address(node.name) + ".\n";
             }
             else
             {
-                textToDisplay += "There is a " + p.get_type() + " that " + p.get_condition() + " to be delivered at:\n" + Address(node.name) + ".\n\n";
+                textToDisplay += "There is a " + p.getType() + " that " + p.getCondition() + " to be delivered at:\n" + Address(node.name) + ".\n\n";
             }
             textboxStuff.Add(textToDisplay);
 
             index++;
-            //index--;
         }
 
 
         UpdateText(textboxStuff);
 
     }
-
-    // Update is called once per frame
+    
     private string Address(string nodeName)
     {
         string returnString = "";
