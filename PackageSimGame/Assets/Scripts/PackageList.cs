@@ -1,80 +1,70 @@
-﻿using System.Collections;
+﻿/*PackageList
+ * 
+ * Static object that holds collection of packages that persists through multiple in-game days,
+ * to ensure that players are still responsible for previously undelivered packages
+ * 
+ * 
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public static class PackageList
 {
-    //public GameObject textObject;
-    static Text package_list;
-    static string yes1, textToDisplay;
-    public static bool hasList = false;
-    public static int numOfPackages;
-    //static int count = 0;
-    public static List<Package> packages = new List<Package>();
+    //Member variables
+        //Text object and text for displaying info to player
+        static Text package_list;
 
-    private static  List<House_Trigger> nodes; 
-
+        //Collection of Package objects and size
+        public static int numOfPackages;
+        public static List<Package> packages = new List<Package>();
+    
+    //Initialization and collection of all package objects 
     public static void Start()
     {
-        nodes = Object.FindObjectOfType<PackageAssigner>().getHouses();
+       
         packages.RemoveAll(item => item == null);
-        textToDisplay = "";
         
-        //yes1 = "";
+        
         GameObject textObject = GameObject.FindGameObjectWithTag("Texty");
-
-        package_list = textObject.GetComponent<Text>();
-            //Debug.Log("I have the old text box?");
-           // Debug.Log(Object.FindObjectOfType<Text>().text);
-            //Debug.Log(package_list.text);
+        
+            
+        /*Debugging
+         * 
+        //Debug.Log("I have the old text box?");
+        //Debug.Log(Object.FindObjectOfType<Text>().text);
+        //Debug.Log(package_list.text);
         if (package_list==null)
         {
             package_list = textObject.GetComponent<Text>();
             Debug.Log("Override");
         }
-
+        */
        
-        //DontDestroyOnLoad(textObject);
-        numOfPackages = 5; //Just 1 for testing
-
-        //numOfPackages = Random.Range(6, 8);
+       numOfPackages = 5; //Hardcoded to 5 for testing
+     //numOfPackages = Random.Range(6, 8);
 
         for (int i = 0; i < numOfPackages; i++)
         {
             PackageGenerate();
         }
-        /*
-        foreach (Package package in list.packages)
-        {
-            package_list.GetComponent<Text>().text += package.get_type() + ' ' + package.get_condition() + "\n";
-        }
-        */
-        int index = 0;
-        
-        
-        //yes1 += "Package" + count++ +"\n";
-
-        package_list.text += textToDisplay;
+       
     }
 
    
 
-
-    private static void PackageGenerate() {
-
-
-
-
-
-    Package package = new Package();
+    //Initializes new package object and its values, and adds to static collection
+    private static void PackageGenerate()
+    {
+        Package package = new Package();
         package.Generate();
         if (!packages.Contains(package))
         {
             packages.Add(package);
-
-            Debug.Log(package.get_condition() + " and " + package.get_type());
-
+            //Debug.Log(package.getCondition() + " and " + package.getType());
         }
     }
 
