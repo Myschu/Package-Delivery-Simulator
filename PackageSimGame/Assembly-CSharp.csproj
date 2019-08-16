@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Daily_Expenses.cs" />
      <Compile Include="Assets\Scripts\DayCount.cs" />
      <Compile Include="Assets\Scripts\End_Stats.cs" />
+     <Compile Include="Assets\Scripts\Gas.cs" />
      <Compile Include="Assets\Scripts\GenerateDeliveries.cs" />
      <Compile Include="Assets\Scripts\Get_Position.cs" />
      <Compile Include="Assets\Scripts\Help.cs" />
