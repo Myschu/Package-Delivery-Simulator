@@ -1,69 +1,74 @@
-﻿using System.Collections;
+﻿/*PackageAssigner
+ * 
+ * Main logic for handling the assignment of package objects to delivery locations and generating text for player
+ * 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PackageAssigner : MonoBehaviour
 {
-    public Text text;
-    private string textToDisplay;
-    GameObject[] houses;
-    List<House_Trigger> nodes;
-    int packageNumber;
-    private List<string> textboxStuff = new List<string>();
-    // Start is called before the first frame update
+    //Text box assigned manually in Unity which will display info to player
+        public Text text;
 
+    //Local variables
+        private string textToDisplay;
+        private GameObject[] houses;
+        private List<House_Trigger> nodes; //Dynamically sized collection containing each delivery area
+        private int packageNumber;
+        private List<string> textboxStuff = new List<string>();
+
+
+    //Unused getter for list of delivery areas
     public List<House_Trigger> getHouses()
     {
         return nodes;
     } 
+
+    /* Occurs upon load
+     * 
+     * Finds all houses and packages and assigns each package to a random house
+     * Additionally, sends generated address info to Textbox to be displayed to player
+     * 
+     */
     void Start()
     {
         nodes = new List<House_Trigger>();
-        houses = GameObject.FindGameObjectsWithTag("House");
-
-        //packageNumber = Random.Range(6, 8);
+        houses = GameObject.FindGameObjectsWithTag("House");        
         packageNumber = PackageList.numOfPackages;
+        
 
-        //int index = packageNumber;
-        /* Debugging
-        int i = 0;
-        foreach (GameObject haus in houses) {
-            Debug.Log(++i +") "+ haus.name);
-        }
-        */
+        //Every package is randomly assigned to a delivery area with equal weighting.
+        //and an address is generated as delivery destination
         int index = 0;
         foreach (Package p in PackageList.packages)
-        //while (index > 0)
         {
             string textToDisplay = "";
-            //Package package = new Package();
-            //package.Generate();
-            House_Trigger node = houses[Random.Range(0, 16)].GetComponent<House_Trigger>();
+            House_Trigger node = houses[Random.Range(0, houses.Length)].GetComponent<House_Trigger>();
             nodes.Add(node);
             node.pushPackage(p);
             node.pushIndex(index);
-            //node.PackageList.packages.IndexOf(p));
-            if (p.get_condition() == "none")
+            if (p.getCondition() == "none")
             {
-                textToDisplay += "There is a " + p.get_type() + " to be delivered at: " + Address(node.name) + ".\n";
+                textToDisplay += "There is a " + p.getType() + " to be delivered at: " + Address(node.name) + ".\n";
             }
             else
             {
-                textToDisplay += "There is a " + p.get_type() + " that " + p.get_condition() + " to be delivered at:\n" + Address(node.name) + ".\n\n";
+                textToDisplay += "There is a " + p.getType() + " that " + p.getCondition() + " to be delivered at:\n" + Address(node.name) + ".\n\n";
             }
             textboxStuff.Add(textToDisplay);
-
             index++;
-            //index--;
         }
 
 
         UpdateText(textboxStuff);
-
     }
-
-    // Update is called once per frame
+    
+    //Helper method with temporarily hard-coded street names
+    //House numbers are given a range according to pre-determined map in Unity assets folder
     private string Address(string nodeName)
     {
         string returnString = "";
@@ -110,7 +115,7 @@ public class PackageAssigner : MonoBehaviour
             returnString += number + " Mourningwood Lane";
         }
 
-
+        //Intentional rhombic yellow sponge reference
         if (nodeName == "00-01")
         {
             number = Random.Range(1, 50);
@@ -159,18 +164,36 @@ public class PackageAssigner : MonoBehaviour
             returnString += number + " East Main Street";
         }
 
-
-
         return returnString;
     }
 
+    //Setter for text display used by House_Trigger to update list whenever delivery is successful (and therefore removes that package from the list)
     public void RemoveText(int index)
     {
-        textboxStuff[index] = "";
-        UpdateText(textboxStuff);
+       
+            textboxStuff[index] = "";
+            UpdateText(textboxStuff);
+       
     }
 
-    public void UpdateText(List<string> text)
+    //Check for reset logic
+    public bool hasText()
+    {
+        bool has = false;
+
+        foreach ( string text in textboxStuff)
+        {
+            if (!(text == "")) 
+            {
+                has = true;
+            }
+        }
+        return has;
+    }
+
+
+    //Ensures that new text is generated every time so that there is no unintended additive effect
+    private void UpdateText(List<string> text)
     {
         this.text.text = "";
         foreach (string t in text) {

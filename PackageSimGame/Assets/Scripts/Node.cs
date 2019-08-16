@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*Node
+ * 
+ * Logic/Inner workings of each house node/button in "Planning" Scene
+ * Creates estimated time based on number of nodes clicked (into PathTime)
+ * Looping routes recolors already selected nodes
+ * 
+ */
+
 public class Node : MonoBehaviour
 {
     public string TagName = "Map";
@@ -24,8 +32,7 @@ public class Node : MonoBehaviour
         tog = 0;
         Map = GameObject.FindGameObjectWithTag(TagName);
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         Button.GetComponent<Button>().interactable = Interactable;
@@ -33,6 +40,8 @@ public class Node : MonoBehaviour
 
 
     }
+
+    //Function called when a button/node is pressed. "tog" is a variable used to fix an issue where clicks would register more than once
     void activate()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -48,6 +57,7 @@ public class Node : MonoBehaviour
         }
     }
 
+    //Action listener that adds the current button to a list of selected buttons used to calculate estimated time travelled, color change, and interactability of nodes
     void TaskOnClick()
     {
         Debug.Log("clicked");

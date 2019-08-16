@@ -4,26 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*
-public class Map : MonoBehaviour
-{
-    public GameObject button1, button2, path;
-    //public Transform target;
+/*Map
+ * 
+ * Main code for the interactable map in the "Planning" scene
+ * Collects all the information of house/button nodes
+ * Logic used to prevent player from jumping to non-adjacent nodes
+ * 
+ */
 
-    void Update()
-    {
-        bool onoff1 = button1.GetComponent<Toggle>().isOn;
-        bool onoff2 = button2.GetComponent<Toggle>().isOn;
-        if (onoff1 == true && onoff2 == true)
-        {
-            //Gizmos.color = Color.red;
-            //Gizmos.DrawLine(transform.position, target.position);
-            path.GetComponent<Image>().color = Color.red;
-        }
-        else path.GetComponent<Image>().color = Color.gray;
-    }
-}
-*/
 public class Map : MonoBehaviour
 {
     public Material line_material;
@@ -31,17 +19,13 @@ public class Map : MonoBehaviour
     public string TagName2 = "Path";
     public GameObject[] Paths;
     public GameObject[] Buttons;
-    //public GameObject[] Paths;
     public GameObject Origin;
     private int currentIndex, previousIndex;
-    public List<int> LastSelected = new List<int>();
+    public List<int> LastSelected = new List<int>(); //List of indexes of all buttons on the map
     void Start()
     {
         
-        //Node button = Origin.GetComponent<Node>();
-        //button.NodeOn = true;
-        //LastSelected.Add(Origin);
-        foreach (GameObject node in Buttons)
+        foreach (GameObject node in Buttons) //Initially sets all buttons to be interactable by the player
         {
             Node button = node.GetComponent<Node>();
             button.Interactable = true;
@@ -86,6 +70,7 @@ public class Map : MonoBehaviour
             Origin = Buttons[LastSelected[0]];
             Node button = Origin.GetComponent<Node>();
             button.NodeOn = true;
+            //Sets the first selected node as the origin and subsequent selections as extensions from origin
             int index = System.Array.IndexOf(Buttons, Button);
             Node curr_button = Buttons[index].GetComponent<Node>();
             curr_button.Interactable = true;
@@ -108,7 +93,7 @@ public class Map : MonoBehaviour
             {
                 Node buttontemp2 = Buttons[index - 1].GetComponent<Node>();
                 buttontemp2.Interactable = true;
-            }
+            }//Logic used to make only the adjacent nodes (and itself) interactable 
         }
     }
 }

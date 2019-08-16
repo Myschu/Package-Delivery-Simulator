@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*Paths
+ * 
+ * Code used to create the conditions of each road
+ * Conditions determine events and the time it takes to travel
+ * 
+ */
+
 public class Paths : MonoBehaviour
 {
     public int time_takes = 30;
@@ -24,6 +31,8 @@ public class Paths : MonoBehaviour
             time_takes += 5;
         }
     }
+
+    //Function used to randomly assign conditions to the paths
     private int roll_condition()
     {
         int roll = Random.Range(1, 101);
